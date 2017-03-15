@@ -10,7 +10,13 @@
 		</c:if>
 		<button class="btn btn-danger btn-enindex">EN</button>
 	</div>
-	<div class="imbox"><img src="<%=path%>/static/spkx/images/top_txt.png"><div class="imbox_wz"><h1>第三届食品科学与人类健康国际研讨会</h1><p>2017年8月5~6日　中国　吉林　长春<p></div>
+	<div class="imbox">
+		<%--<img src="<%=path%>/static/spkx/images/top_txt.png">--%>
+		<div class="imbox_wz"><h1>第七届食品与生物学科高水平SCI论文撰写与投稿技巧研修班</h1>
+			<%--<h2>暨“面向决策的大数据分析”培训班</h2>--%>
+			<p>2017年8月3~4日　中国　吉林　长春
+			<p></div>
+		<%--<div class="imbox_wz"><h1>第三届食品科学与人类健康国际研讨会</h1><p>2017年8月5~6日　中国　吉林　长春<p></div>--%>
 	</div>
 	<div class="bm">
 		<a href="info.jsp"><img src="<%=path%>/static/spkx/images/top_bm.png"></a>
