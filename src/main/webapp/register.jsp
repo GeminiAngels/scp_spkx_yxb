@@ -11,11 +11,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
-	<meta name="description" content="第三届食品科学与人类健康国际研讨会">
+	<meta name="description" content="第七届食品与生物学科高水平SCI论文撰写与投稿技巧研修班">
 	<meta name="author" content="北京国科智地科技有限公司">
 	<link rel="shortcut icon" href="<%=path%>/static/assets/ico/favicon.ico">
 
-	<title>第三届食品科学与人类健康国际研讨会</title>
+	<title>第七届食品与生物学科高水平SCI论文撰写与投稿技巧研修班</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="<%=path%>/static/css/bootstrap.min.css" rel="stylesheet">
@@ -50,7 +50,6 @@
 					</div>
 				</div>
 				<div class="row">
-					<!-- <c:if test="${register.zfflag ne '1'}"> -->
 					<input type="text" name="id" id="id" class="hide"  value="${register.id}">
 					<div class="col-sm-4 col-sm-offset-2">
 						<div class="inputContainer">
@@ -71,6 +70,18 @@
 							</div>
 						</div>
 					</div>
+					<div class="col-sm-4 col-sm-offset-2">
+						<div class="inputContainer">
+							<label>身份证号：</label>
+							<input type="text" name="sfzhm" id="sfzhm" placeholder="请准确填写本人身份证号，用于制作培训证书" class="form-control" autocomplete="off" value="${register.sfzhm}" >
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="inputContainer">
+							<label>学历：</label>
+							<input type="text" name="degree" id="degree" class="form-control" autocomplete="off" value="${register.degree}" >
+						</div>
+					</div>
 					<div class="col-sm-4 col-sm-offset-2 register-adv" style="${empty register?'':'display:none'}">
 						<div class="inputContainer">
 							<label class="screen-reader-text">会员密码：</label>
@@ -85,23 +96,25 @@
 					</div>
 					<div class="col-sm-4 col-sm-offset-2">
 						<div class="inputContainer">
-							<label class="screen-reader-text">职务：</label>
-							<input type="text" name="job" id="job" class="form-control" autocomplete="off" value="${register.job}" >
-							<!-- <select id="job" name="job" class="form-control" value="${register.job}" >
-								<c:if test="${empty register}">
-								<option value="无">无</option>
-								<option value="初级">初级</option>
-								<option value="中级" selected="selected">中级</option>
-								<option value="副高">副高</option>
-								<option value="正高">正高</option>
-								</c:if>
-								<c:if test="${not empty register}">
-								<option value="${register.job}" selected="selected">${register.job}</option>
-								</c:if>
-							</select> -->
+							<label class="screen-reader-text">工作情况：</label>
+							<select id="gzqk" name="gzqk" class="form-control" >
+								<option value="">请选择职称</option>
+								<option value="在职" ${not empty register and register.gzqk eq '在职'?'selected="selected"':''}>在职</option>
+								<option value="普通在校本科生" ${not empty register and register.gzqk eq '普通在校本科生'?'selected="selected"':''}>普通在校本科生</option>
+								<option value="普通在校硕士研究生" ${not empty register and register.gzqk eq '普通在校硕士研究生'?'selected="selected"':''}>普通在校硕士研究生</option>
+								<option value="普通在校博士研究生" ${not empty register and register.gzqk eq '普通在校博士研究生'?'selected="selected"':''}>普通在校博士研究生</option>
+								<option value="其他" ${not empty register and register.gzqk eq '其他'?'selected="selected"':''}>其他</option>
+							</select>
 						</div>
 					</div>
 					<div class="col-sm-4">
+						<div class="inputContainer">
+							<label class="screen-reader-text">单位：</label>
+							<input type="text" name="company" id="company" value="${register.company}" class="form-control" autocomplete="off" />
+						</div>
+					</div>
+
+					<div class="col-sm-4  col-sm-offset-2">
 						<div class="inputContainer">
 							<label class="screen-reader-text">职称：</label>
 							<select id="title" name="title" class="form-control" >
@@ -124,38 +137,18 @@
 									<option value="助理农艺师" ${not empty register and register.title eq '助理农艺师'?'selected="selected"':''}>助理农艺师</option>
 									<option value="其他" ${not empty register and register.title eq '其他'?'selected="selected"':''}>其他</option>
 									<option value="其他（研究生等）" ${not empty register and register.title eq '其他（研究生等）'?'selected="selected"':''}>其他（研究生等）</option>
-
 							</select>
-						</div>
-					</div>
-					<div class="col-sm-8 col-sm-offset-2">
-						<div class="inputContainer">
-							<label class="screen-reader-text">单位：</label>
-							<input type="text" name="company" id="company" value="${register.company}" class="form-control" autocomplete="off" />
-						</div>
-					</div>
-					<div class="col-sm-4 col-sm-offset-2">
-						<div class="inputContainer">
-							<label class="screen-reader-text">办公电话：</label>
-							<input type="text" name="officephone" id="officephone" class="form-control" autocomplete="off" value="${register.officephone}"/>
 						</div>
 					</div>
 					<div class="col-sm-4">
 						<div class="inputContainer">
-							<label class="screen-reader-text">手机：</label>
-							<input type="text" name="telphone" id="telphone" value="${register.telphone}" class="form-control" autocomplete="off" ${not empty register?'disabled="disabled"':''}/>
-						</div>
-					</div>
-					<div class="col-sm-8 col-sm-offset-2">
-						<div class="inputContainer">
-							<label class="screen-reader-text">Email：</label>
-							<input type="text" name="email" id="email" class="form-control" autocomplete="off" ${not empty register?'disabled="disabled"':''} value="${register.email}"/>
-							<p style="color:red ;${not empty register?'display:none':''} " >请尽量不要选择QQ邮箱，否则可能无法收到会务组发出的邮件</p>
+							<label class="screen-reader-text">职务：</label>
+							<input type="text" name="job" id="job" class="form-control" autocomplete="off" value="${register.job}" >
 						</div>
 					</div>
 					<div class="col-sm-4 col-sm-offset-2">
 						<div class="inputContainer">
-							<label class="screen-reader-text">联系地址：</label>
+							<label class="screen-reader-text">地址：</label>
 							<input type="text" name="address" id="address" value="${register.address}" class="form-control" autocomplete="off" />
 						</div>
 					</div>
@@ -167,116 +160,41 @@
 					</div>
 					<div class="col-sm-4 col-sm-offset-2">
 						<div class="inputContainer">
-							<label class="screen-reader-text">论文张贴否：</label>
-							<div class="form-control" style="line-height:20px;border:none">
-								<label class="radio-inline">
-									<input type="radio" name="sfztlw" id="sfztlw1" value="是" ${register.sfztlw eq '是'?'checked':''} > 是
-								</label>
-								<label class="radio-inline">
-									<input type="radio" name="sfztlw" id="sfztlw2" value="否" ${empty register or register.sfztlw eq '否'?'checked':''}  > 否
-								</label>
-							</div>
+							<label class="screen-reader-text">办公电话：</label>
+							<input type="text" name="officephone" id="officephone" class="form-control" autocomplete="off" value="${register.officephone}"/>
 						</div>
 					</div>
-					<div id="lw_area" class="col-sm-4" style="${register.sfztlw eq '是'?'':'display:none'}">
-						<label class="screen-reader-text">论文上传：</label>
-						<input type="file" name="thesis" id="thesis" class="form-control" value="${thesis.filename}.${thesis.type}" ${not empty thesis?'style="display: none"':'style="display: inline"'} />
-							<%--<a id="fileName" class="form-control " href="<%=path%>/auth.do?method=download&fileid=${thesis.id}" ${not empty thesis?'style="display: inline"':'style="display: none"'}>${thesis.filename}.${thesis.type}</a><span class="input-group-addon" >重新上传</span>--%>
-						<div class="" id="fileName" ${not empty thesis?'style="display: inline"':'style="display: none"'}>
-							<a  class="form-control "  href="<%=path%>/auth.do?method=download&fileid=${thesis.id}" >${thesis.filename}.${thesis.type}</a>
-							<span class="btn btn-default" style=" width: 25% ;float: right ;margin-top: -46px" id="btn-clear" >重新上传</span>
-						</div>
-
-
-						<%--<c:if test="${not empty thesis}">
-							<div class="inputContainer">
-								<label class="screen-reader-text">我的论文：</label>
-								<a class="form-control" style="line-height: 23px;" href="<%=path%>/auth.do?method=download&fileid=${thesis.id}">${thesis.filename}.${thesis.type}</a>
-								<span class="btn btn-default" style=" width: 25% ;float: right ;margin-top: -46px" id="btn-clear" >重新上传</span>
-							</div>
-						</c:if>
-						<c:if test="${empty thesis}">
-							<div class="inputContainer">
-								<label class="screen-reader-text">论文上传：</label>
-								<input type="file" name="thesis" id="thesis" class="form-control" />
-							</div>
-						</c:if>--%>
-					</div>
-					<div class="col-sm-8 col-sm-offset-2">
+					<div class="col-sm-4">
 						<div class="inputContainer">
-							<label class="screen-reader-text">申请会上发言否：</label>
-							<div class="form-control" style="line-height:20px;border:none">
-								<label class="radio-inline">
-									<input type="radio" name="sfsqhyfy" id="sfsqhyfy1" value="是" ${register.sfsqhyfy eq '是'?'checked':''} > 是
-								</label>
-								<label class="radio-inline">
-									<input type="radio" name="sfsqhyfy" id="sfsqhyfy2" value="否" ${empty register or register.sfsqhyfy eq '否'?'checked':''}  > 否
-								</label>
-							</div>
-						</div>
-					</div>
-					<div id="fy_area" class="alert alert-warning col-sm-8 col-sm-offset-2" style="${register.sfsqhyfy eq '是'?'':'display:none'}">
-						<div class="inputContainer">
-							<label class="screen-reader-text">发言题目：</label>
-							<input type="text" name="fytm" id="fytm" value="${register.fytm}" class="form-control" autocomplete="off" />
-						</div>
-						<div class="inputContainer">
-							<label class="screen-reader-text">发言内容摘要（1000字以内）：</label>
-							<textarea name="fynrzy" id="fynrzy" class="form-control" autocomplete="off" >${register.fynrzy}</textarea>
+							<label class="screen-reader-text">手机：</label>
+							<input type="text" name="telphone" id="telphone" placeholder="请准确填写本人手机号，用于培训现场签到" value="${register.telphone}" class="form-control" autocomplete="off" ${not empty register?'disabled="disabled"':''}/>
 						</div>
 					</div>
 					<div class="col-sm-8 col-sm-offset-2">
 						<div class="inputContainer">
-							<label class="screen-reader-text">发表论文否：</label>
-							<div class="form-control" style="line-height:20px;border:none">
-								<label class="radio-inline">
-									<input type="radio" name="sffblw" id="sffblw1" value="是" ${register.sffblw eq '是'?'checked':''} > 是
-								</label>
-								<label class="radio-inline">
-									<input type="radio" name="sffblw" id="sffblw2" value="否" ${empty register or register.sffblw eq '否'?'checked':''}  > 否
-								</label>
-							</div>
+							<label class="screen-reader-text">Email：</label>
+							<input type="text" name="email" id="email" class="form-control" placeholder="请准确填写email地址，用于接收电子版邀请函以及后续的报道通知" autocomplete="off" ${not empty register?'disabled="disabled"':''} value="${register.email}"/>
+							<%--<p style="color:red ;${not empty register?'display:none':''} " >请尽量不要选择QQ邮箱，否则可能无法收到会务组发出的邮件</p>--%>
 						</div>
 					</div>
-					<div id="gj_area" class="alert alert-warning col-sm-8 col-sm-offset-2" style="${register.sffblw eq '是'?'':'display:none'}">
-						<div class="inputContainer">
-							<label class="screen-reader-text">投稿期刊：</label>
-							<!-- <input type="text" name="journalname" id="journalname" value="${register.journalname}" class="form-control" autocomplete="off" ${not empty register?'disabled="disabled"':''}/> -->
-							<select id="journalname" name="journalname" class="form-control" value="${register.journalname}" >
-									<option value="">请选择投稿期刊</option>
-									<option value="《食品科学》" ${not empty register and register.journalname eq '《食品科学》'?'selected="selected"':''}>《食品科学》</option>
-									<option value="《肉类研究》" ${not empty register and register.journalname eq '《肉类研究》'?'selected="selected"':''}>《肉类研究》</option>
-									<option value="《乳业科学与技术》" ${not empty register and register.journalname eq '《乳业科学与技术》'?'selected="selected"':''}>《乳业科学与技术》</option>
-									<option value="《Food Science and Human Wellness》" ${not empty register and register.journalname eq '《Food Science and Human Wellness》'?'selected="selected"':''}>《Food Science and Human Wellness》</option>
-							</select>
-						</div>
-						<div class="inputContainer">
-							<label class="screen-reader-text">稿件编号：</label>
-							<input type="text" name="gjbh" id="gjbh" value="${register.gjbh}" class="form-control" autocomplete="off" />
-						</div>
 
-						<div class="inputContainer">
-							<label class="screen-reader-text">论文题目：</label>
-							<input type="text" name="gjtm" id="gjtm" value="${register.gjtm}" class="form-control" autocomplete="off" />
-						</div>
-					</div>
 					<div class="col-sm-4 col-sm-offset-2">
 						<div class="inputContainer">
 							<label class="screen-reader-text">住宿要求：</label>
 							<div class="form-control" style="line-height:20px;border:none">
-								<label class="radio-inline">
+								<%--<label class="radio-inline">
 									<input type="radio" name="zsyq" id="zsyq1" value="不住宿" ${empty register or register.zsyq eq '不住宿'?'checked':''} > 不住宿
-								</label>
+								</label>--%>
 								<label class="radio-inline">
 									<input type="radio" name="zsyq" id="zsyq2" value="标间" ${register.zsyq eq '标间'?'checked':''} > 标间
 								</label>
 								<label class="radio-inline">
-									<input type="radio" name="zsyq" id="zsyq3" value="单床合住" ${register.zsyq eq '单床合住'?'checked':''} > 单床合住
+									<input type="radio" name="zsyq" id="zsyq3" value="单床拼住" ${register.zsyq eq '单床拼住'?'checked':''} > 单床拼住
 								</label>
 							</div>
 						</div>
 					</div>
-					<div id="zssj_area" class="col-sm-4" style="${empty register or register.zsyq eq '不住宿'?'display:none':''}">
+					<div id="zssj_area" class="col-sm-4" >
 						<label class="screen-reader-text">住宿时间：</label>
 						<table style="width:100%">
 							<tr>
@@ -290,6 +208,29 @@
 							</tr>
 						</table>
 					</div>
+					<div class="col-sm-8  col-sm-offset-2">
+						<label class="screen-reader-text">证件照片：</label>
+						<input type="file" name="thesis" id="thesis" class="form-control"  ${not empty thesis?'style="display: none"':'style="display: inline"'} />
+						<p style="color:red ;${not empty register?'display:none':''} " >请上传本人正面免冠彩色照片，分辨率大于500*500</p>
+
+					<%--<a id="fileName" class="form-control " href="<%=path%>/auth.do?method=download&fileid=${thesis.id}" ${not empty thesis?'style="display: inline"':'style="display: none"'}>${thesis.filename}.${thesis.type}</a><span class="input-group-addon" >重新上传</span>--%>
+						<div class="" id="fileName" ${not empty thesis?'style="display: inline"':'style="display: none"'}>
+							<a  class="form-control "  href="<%=path%>/auth.do?method=download&fileid=${thesis.id}" >${thesis.filename}.${thesis.type}</a>
+							<span class="btn btn-default" style=" width: 25% ;float: right ;margin-top: -46px" id="btn-clear" >重新上传</span>
+						</div>
+					</div>
+					<div class="col-sm-4 col-sm-offset-2">
+						<div class="inputContainer">
+							<label class="screen-reader-text">汇款方式：</label>
+							<input type="text" name="hkfs" id="hkfs" value="${register.hkfs}" class="form-control" autocomplete="off"/>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="inputContainer">
+							<label class="screen-reader-text">培训费：</label>
+							<input type="text" name="pxf" id="pxf" class="form-control" autocomplete="off" value="${register.pxf}"/>
+						</div>
+					</div>
 					<div class="col-sm-8 col-sm-offset-2">
 						<div class="inputContainer">
 							<label class="screen-reader-text"><i>备注：</i></label>
@@ -299,7 +240,7 @@
 					<c:if test="${not empty register}">
 					<div class="col-sm-4 col-sm-offset-2">
 						<div class="inputContainer">
-							<label class="screen-reader-text">缴费状态：</label>
+							<label class="screen-reader-text">到款情况：</label>
 							<input type="text" name="zfflag" id="zfflag" class="form-control" autocomplete="off" value="<c:if test="${register.zfflag eq 0}">未缴纳会议费</c:if><c:if test="${register.zfflag eq 1}">已缴纳会议费</c:if><c:if test="${register.zfflag eq 2}">收到电子版汇款单</c:if>" disabled="disabled" >
 						</div>
 					</div>
@@ -324,86 +265,7 @@
 						</div>
 					</div>
 					</c:if>
-					<!-- <div class="col-sm-4 col-sm-offset-2" id="register-pay">
-						<div class="inputContainer">
-						<label class="screen-reader-text">是否需要发票：</label>
-						<div class="form-control" style="line-height:20px;border:none">
-							<label class="radio-inline">
-							  <input type="radio" name="invoice" id="invoice1" value="不需要" ${not empty register and register.invoice eq '不需要'?'checked="checked"':''}> 不需要
-							</label>
-							<label class="radio-inline">
-							  <input type="radio" name="invoice" id="invoice2" value="需要" ${empty register || register.invoice ne '不需要'?'checked="checked"':''}> 需要
-							</label>
-						</div>
-						</div>
-					</div>
-					<div class="col-sm-4 check-group" ${not empty register and register.invoice eq '不需要'?'style="display:none"':''}>
-						<div class="inputContainer">
-						<label class="screen-reader-text">开票内容：</label>
-						<div class="form-control" style="line-height:20px;">
-							<label class="radio-inline">
-							  <input type="checkbox" name="invoice_chk" value="会议费" ${fn:indexOf(register.invoice,"会议费") >= 0?'checked="checked"':''}> 会议费
-							</label>
-							<label class="radio-inline">
-							  <input type="checkbox" name="invoice_chk" value="实习费" ${fn:indexOf(register.invoice,"实习费") >= 0?'checked="checked"':''}> 实习费
-							</label>
-						</div>
-						</div>
-					</div>
 					<div class="col-sm-8 col-sm-offset-2">
-						<div class="inputContainer check-group" ${not empty register and register.invoice eq '不需要'?'style="display:none"':''}>
-						<label class="screen-reader-text">发票抬头（单位名称）：</label>
-							<input type="text" name="fptt" id="fptt" value="${register.fptt}" class="form-control" autocomplete="off" placeholder="需要发票请填写发票抬头" />
-						</div>
-						<div class="inputContainer">
-						<label id="invoice_msg" class="screen-reader-text" style="color:red;">
-						<c:if test="${not empty register and register.invoice eq '不需要'}">说明：请与客服联系线下付款！
-						</c:if>
-						<c:if test="${empty register or register.invoice ne '不需要'}">说明：会议费发票由北京国科智地科技有限公司开具，实习费由当地旅行社开具。
-						</c:if>
-						</label>
-						</div>
-					</div> -->
-
-					<!-- <c:if test="${not empty register}">
-					<div class="col-sm-8 col-sm-offset-2 register-pay" ${register.invoice eq '不需要'?'style="display:none"':''}>
-						<div class="inputContainer">
-						<label class="screen-reader-text">缴费标准：</label>
-						<div class="form-control" style="line-height:20px;border:none">
-							<label class="radio-inline">
-							  <input type="radio" name="ordermoney" id="ordermoney1" value="1800"> 学生 1800 元
-							</label>
-							<label class="radio-inline">
-							  <input type="radio" name="ordermoney" id="ordermoney2" value="2000" checked="checked"> 老师 2000 元
-							</label>
-						</div>
-						</div>
-					</div>
-
-					<div class="col-sm-8 col-sm-offset-2 register-pay" ${ register.invoice eq '不需要'?'style="display:none"':''}>
-						<div class="inputContainer">
-						<label class="screen-reader-text">支付方式：</label><span style="font-weight:bold;color:red;">银联支付售后开通</span>
-						<div class="form-control" style="line-height:20px;border:none;height:80px;">
-							<label class="radio-inline">
-							  <input type="radio" name="ordertype" id="ordertype1" value="1" checked="checked"><img id="zftb_zfb" src="<%=path%>/static/assets/img/ali.png" style="width:100px;"/>
-							</label>
-							<label class="radio-inline">
-							  <input type="radio" name="ordertype" id="ordertype2" value="2"><img id="zftb_wx" src="<%=path%>/static/assets/img/wechats.png" style="width:100px;"/>
-							</label>
-							<p class="pc_hide"></p>
-							<label class="radio-inline">
-							  <input type="radio" name="ordertype" id="ordertype3" value="3"><img id="zftb_yl" src="<%=path%>/static/assets/img/unionpay.png" style="width:100px;"/>
-							</label>
-						</div>
-						</div>
-					</div>
-					</c:if> -->
-
-					<div class="col-sm-8 col-sm-offset-2">
-						<%--<c:if test="${empty register}">
-							<button id="registerBtn" name="submit" type="button" class="btn btn-primary btn-lg">提交报名</button>
-						</c:if>--%>
-
 						<c:choose>
 							<c:when  test="${empty register}">
 								<button id="registerBtn" name="submit" type="button" class="btn btn-primary btn-lg">提交报名</button>
@@ -417,115 +279,14 @@
 						<button id="payBtn" name="submit" type="button" class="btn btn-primary btn-lg" ${register.zfflag eq '1'?'disabled="disabled"':''}>${register.invoice eq '不需要'?'确定':'生成订单并支付'}</button>
 						</c:if> -->
 					</div>
-					<c:if test="${not empty register}">
+					<%--<c:if test="${not empty register}">
 						<div class="col-sm-4 col-sm-offset-4" style="padding-top: 20px">
-							<%--<h3 style="text-align: center">二维码</h3>--%>
+							&lt;%&ndash;<h3 style="text-align: center">二维码</h3>&ndash;%&gt;
 							<div id="qrcode">
 							</div>
-
 						</div>
-					</c:if>
+					</c:if>--%>
 
-					<!-- </c:if> -->
-					<!-- <c:if test="${register.zfflag eq '1'}">
-						<h3 style="padding-left:10px;">个人信息</h3>
-						<table id="user_table" class="table table-bordered table-stripted table-hover">
-							<tr>
-								<th>学员姓名</th>
-								<td style="min-width: 100px;">${register.nickname}</td>
-								<th>性　　别</th>
-								<td>${register.sex}</td>
-							</tr>
-							<tr>
-								<th>学　　历</th>
-								<td>${register.degree}</td>
-								<th>职　　称</th>
-								<td>${register.job}</td>
-							</tr>
-							<tr>
-								<th>　 Email</th>
-								<td>${register.email}</td>
-								<th>联系电话</th>
-								<td>${register.telphone}</td>
-							</tr>
-							<tr>
-								<th>单　　位</th>
-								<td>${register.company}</td>
-								<th>邮　　编</th>
-								<td>${register.postcode}</td>
-							</tr>
-							<tr>
-								<th>地　　址</th>
-								<td colspan="3">${register.address}</td>
-							</tr>
-							<tr>
-								<th>住宿要求</th>
-								<td>${register.zsyq}</td>
-								<th>实习情况</th>
-								<td>${register.sxxl}</td>
-							</tr>
-							<tr>
-								<th>发票抬头</th>
-								<td><c:if test="${register.invoice ne '不需要'}">${register.fptt}</c:if>&nbsp;</td>
-								<th>开票内容</th>
-								<td>${register.invoice}</td>
-							</tr>
-						</table>
-						<h3 style="padding-left:10px;">我的订单</h3>
-						<div class="alert alert-info">提示：如“待支付”订单长时间未完成支付，请移除订单重新支付；如订单信息与实际付款信息不符，请<a href="javascript:;" class="btn-newpay"> 点击重新支付</a></div>
-						<table id="pay_listtable" class="table table-bordered table-stripted table-hover">
-							<tr>
-								<th class="pc_show">会员名</th>
-								<th class="pc_show">支付方式</th>
-								<th class="pc_show">订单时间</th>
-								<th class="pc_hide" style="min-width: 120px;">订单信息</th>
-								<th style="min-width: 80px;">金额(元)</th>
-								<th class="pc_show">支付帐号</th>
-								<th>支付状态</th>
-								<th style="min-width: 60px;">操作</th>
-							</tr>
-							<c:forEach items="${orderList}" var="order">
-							<tr>
-								<td class="pc_show">
-									${order.orderuname}
-								</td>
-								<td class="pc_show">
-									<c:if test="${order.ordertype eq '1'}">支付宝</c:if>
-									<c:if test="${order.ordertype eq '2'}">微信支付</c:if>
-									<c:if test="${order.ordertype eq '3'}">银联支付</c:if>
-								</td>
-								<td class="pc_show">
-									${fn:substring(order.orderdate,5,16)}
-								</td>
-								<td class="pc_hide" style="text-align: left">
-									<b>姓名</b>：${order.orderuname}
-									<div></div>
-									<b>方式</b>：<c:if test="${order.ordertype eq '1'}">支付宝</c:if>
-									<c:if test="${order.ordertype eq '2'}">微信支付</c:if>
-									<c:if test="${order.ordertype eq '3'}">银联支付</c:if>
-									<div></div>
-									<b>时间</b>：${fn:substring(order.orderdate,5,16)}
-								</td>
-								<td>${order.ordermoney}</td>
-								<td class="pc_show">${order.orderaccount}</td>
-								<td>
-									<c:if test="${order.orderstatus eq '0'}"><i class="label label-info">待支付</i></c:if>
-									<c:if test="${order.orderstatus eq '1'}"><span class="label label-success">支付成功<span></c:if>
-									<c:if test="${order.orderstatus eq '-1'}">><span class="label label-warning">发生异常</span></c:if>
-								</td>
-								<td>
-									<c:if test="${order.orderstatus ne '1'}">
-									<a class="btn btn-sm btn-default btn-deleteorder" data-id="${order.id}" data-orderregisterid="${order.orderregisterid}">移除</a>
-									</c:if>
-									<a class="btn btn-sm btn-default btn-reback disabled">退款</a>
-								</td>
-							</tr>
-							</c:forEach>
-							<c:if test="${empty orderList or fn:length(orderList) eq '0'}">
-								<tr><td style="text-align:center" colspan="7">没有任何订单，您可以<a href="javascript:;" class="btn-newpay"> 发起重新支付</a></td></tr>
-							</c:if>
-						</table>
-					</c:if> -->
 				</div>
 			</div>
 		</div>
@@ -713,34 +474,33 @@
 				email:$('#email').val(),
 				address:$('#address').val(),
 				postcode:$('#postcode').val(),
-				sfztlw:$('input[name="sfztlw"]:checked').val(),
-				sfsqhyfy:$('input[name="sfsqhyfy"]:checked').val(),
-				sffblw:$('input[name="sffblw"]:checked').val(),
-				gjbh:$('#gjbh').val(),
-				journalname:$('#journalname').val(),//稿件期刊
-				gjtm:$('#gjtm').val(),//论文题目
+				sfztlw:'',//是否张贴论文
+				sfsqhyfy:'',//是否申请会议发言
+				sffblw:'',//是否发表论文
+				gjbh:'',
+				journalname:'',//稿件期刊
+				gjtm:'',//论文题目
+				sfzhm:$('#sfzhm').val(),//身份证号码
 				zsyq:$('input[name="zsyq"]:checked').val(),
 				zskssj:$('input[name="zsyq"]:checked').val() === '不住宿'?'':$('#zskssj').val(),
 				zsjssj:$('input[name="zsyq"]:checked').val() === '不住宿'?'':$('#zsjssj').val(),
 
-				gzqk:'',
-				fax:'',
-				degree:'',
+				gzqk:$('#gzqk').val(),//工作情况
+				fax:'',//传真
+				degree:$('#degree').val(),//学历
 				invoice:'',
 				sfcjsx:'',
 				sxxl:'',
 				fptt:'',
 				gjzt:'',
-				fytm:$('#fytm').val(),
-				fynrzy:$('#fynrzy').val(),
+				fytm:'',//发言题目
+				fynrzy:'',//发言内容摘要
 				sfzs:$('input[name="zsyq"]:checked').val() === '不住宿'?'否':'是',
 				yqhfszt:'',
-				// invoice:getInvoiceValue(),
-				// sfcjsx:$('input[name="sfcjsx"]:checked').val(),
-				// sxxl:$('input[name="sfcjsx"]:checked').val() == '参加'?$('#sxxl').val():'',
-				// fptt:$('#fptt').val(),
+				message:$('#message').val(),
 
-				message:$('#message').val()
+				hkfs:$('#hkfs').val(),
+				pxf:$('#pxf').val()
 			};
 			if(!register.nickname){
 				$('#nickname').focus().attr('placeholder','该项不能为空！');
@@ -803,8 +563,8 @@
 					// alert(has);
 					//注册：参数说明register为注册信息,isSendMail表示是否发送邮件
 					var isSendMail = true;
-					var file = register.sfztlw == '是'?dwr.util.getValue("thesis"):null;
-					var fileName = register.sfztlw == '是'?$("#thesis").val():null;
+					var file = dwr.util.getValue("thesis");
+					var fileName = $("#thesis").val();
 					RegisterService.register(register,isSendMail,file,fileName,function(msg){
 						if(msg){
 							alert('报名成功，请查收邮件回执!');
@@ -827,7 +587,9 @@
 			var that = this;
 			var register = {
 				id: $('#id').val(),
+				username:'',
 				nickname:$('#nickname').val(),
+//				password:$('#password').val(),
 				sex:$('input[name="sex"]:checked').val(),
 				job:$('#job').val(),
 				title:$('#title').val(),
@@ -837,56 +599,36 @@
 				email:$('#email').val(),
 				address:$('#address').val(),
 				postcode:$('#postcode').val(),
-				sfztlw:$('input[name="sfztlw"]:checked').val(),
-				sfsqhyfy:$('input[name="sfsqhyfy"]:checked').val(),
-				sffblw:$('input[name="sffblw"]:checked').val(),
-				gjbh:$('#gjbh').val(),
-				journalname:$('#journalname').val(),//稿件期刊
-				gjtm:$('#gjtm').val(),//论文题目
+				sfztlw:'',//是否张贴论文
+				sfsqhyfy:'',//是否申请会议发言
+				sffblw:'',//是否发表论文
+				gjbh:'',
+				journalname:'',//稿件期刊
+				gjtm:'',//论文题目
+				sfzhm:$('#sfzhm').val(),//身份证号码
 				zsyq:$('input[name="zsyq"]:checked').val(),
 				zskssj:$('input[name="zsyq"]:checked').val() === '不住宿'?'':$('#zskssj').val(),
 				zsjssj:$('input[name="zsyq"]:checked').val() === '不住宿'?'':$('#zsjssj').val(),
 
-				gzqk:'',
-				fax:'',
-				degree:'',
+				gzqk:$('#gzqk').val(),//工作情况
+				fax:'',//传真
+				degree:$('#degree').val(),//学历
 				invoice:'',
 				sfcjsx:'',
 				sxxl:'',
 				fptt:'',
 				gjzt:'',
-				fytm:$('#fytm').val(),
-				fynrzy:$('#fynrzy').val(),
+				fytm:'',//发言题目
+				fynrzy:'',//发言内容摘要
 				sfzs:$('input[name="zsyq"]:checked').val() === '不住宿'?'否':'是',
 				yqhfszt:'',
-				// invoice:getInvoiceValue(),
-				// sfcjsx:$('input[name="sfcjsx"]:checked').val(),
-				// sxxl:$('input[name="sfcjsx"]:checked').val() == '参加'?$('#sxxl').val():'',
-				// fptt:$('#fptt').val(),
+				message:$('#message').val(),
 
-				message:$('#message').val()
+				hkfs:$('#hkfs').val(),
+				pxf:$('#pxf').val()
+
 			};
 
-			/*if (!register.email) {
-				$('#email').focus().attr('placeholder', '该项不能为空！');
-				return;
-			}else {
-				if(!isEmail(register.email)){
-					alert("Email格式不正确");
-					$('#email').focus();
-					return;
-				}
-			}
-			if (!register.telphone) {
-				$('#telphone').focus().attr('placeholder', '该项不能为空！');
-				return;
-			}*/
-
-			/*//密码校验
-			 if (!register.password) {
-			 $('#password').focus().attr('placeholder', '密码不能为空！');
-			 return;
-			 }*/
 			if ((register.password) &&register.password != $('#repassword').val()) {
 				alert('两次输入密码不一致！');
 				$('#repassword').focus();
@@ -896,41 +638,8 @@
 				$('#nickname').focus().attr('placeholder', '该项不能为空！');
 				return;
 			}
-			/*if (!register.title) {
-			 $('#title').focus().attr('placeholder', '该项不能为空！');
-			 return;
-			 }
-			 if (!register.job) {
-			 $('#job').focus().attr('placeholder', '该项不能为空！');
-			 return;
-			 }
 
 
-			 if (!register.company) {
-			 $('#company').focus().attr('placeholder', '该项不能为空！');
-			 return;
-			 }
-			 if (!register.postcode) {
-			 $('#postcode').focus().attr('placeholder', '该项不能为空！');
-			 return;
-			 }
-			 if (!register.address) {
-			 $('#address').focus().attr('placeholder', '该项不能为空！');
-			 return;
-			 }
-
-			 if ($('input[name="invoice"]:checked').val() == '需要') {
-			 if (!$('input[name="invoice_chk"]:checked').val()) {
-			 alert('请选择开票内容！');
-			 return;
-			 }
-			 if (!register.fptt) {
-			 $('#fptt').focus().attr('placeholder', '请填写发票抬头！');
-			 return;
-			 }
-			 }*/
-
-			// $(that).addClass('disabled');
 			$("#editBtn").prop('disabled', true);
 			//注册：参数说明register为注册信息,isSendMail表示是否发送邮件
 			var isSendMail = false;
@@ -1090,12 +799,12 @@
 			$('#gj_area').toggle();
 		});
 
-		$('input[name="zsyq"]').change(function(e){
+		/*$('input[name="zsyq"]').change(function(e){
 			if($('input[name="zsyq"]:checked').val()=='不住宿')
 				$('#zssj_area').hide();
 			else
 				$('#zssj_area').show();
-		});
+		});*/
 		$('#zskssj,#zsjssj').datetimepicker({
 			minView: "month", //选择日期后，不会再跳转去选择时分秒
 			format: 'yyyy-mm-dd',

@@ -44,7 +44,7 @@
 				<div class="alert alert-info" id="opt-info">点击右侧表格需要修改的行进行编辑</div>
 				<form class="form-horizontal" id="form-user">
 					<input type="hidden" id="id">
-					<div class="form-group">
+					<%--<div class="form-group">
 						<label for="gjzt" class="col-sm-3 control-label">稿件状态</label>
 						<div class="col-sm-9">
 							<select id="gjzt" name="gjzt">
@@ -69,18 +69,18 @@
 								<option value="组版">组版</option>
 							</select>
 						</div>
-					</div>
+					</div>--%>
 					<div class="form-group">
 						<label for="invoice" class="col-sm-3 control-label">会议费</label>
 						<div class="col-sm-9">
 							<select id="invoice" name="invoice">
 								<option value="1400元">1400元</option>
-								<option value="2000元">2000元</option>
+								<option value="1000元">1000元</option>
 							</select>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="zfflag" class="col-sm-3 control-label">缴费状态</label>
+						<label for="zfflag" class="col-sm-3 control-label">到款情况</label>
 						<div class="col-sm-9">
 							<select id="zfflag" name="zfflag">
 								<option value=0>未缴纳会议费</option>
@@ -149,7 +149,7 @@
 					<%--<th>注册时间</th>--%>
 					<th>工作信息</th>
 					<th>邀请函发送状态</th>
-					<th>稿件/会议费/缴费状态</th>
+					<th>会议费/到款情况</th>
 					<th>会务组备注</th>
 					<%--<th>发票抬头</th>--%>
 					<%--<th>缴费凭据</th>--%>
@@ -271,7 +271,7 @@
 
 					+ '<td>单位:' + item.company + ' <br>职务:' + item.job + '</td>'
 					+ '<td>电子版:' + item.yqhfszt + ' <br>纸质版:' + item.zzyqhfszt + '</td>'
-					+ '<td>稿件状态:' + (item.gjzt ? item.gjzt : "") + ' <br>会议费:' + (item.invoice ? item.invoice : "") + ' <br>缴费状态:' + item.zfflag + '</td>'
+					+ '<td>会议费:' + (item.invoice ? item.invoice : "") + ' <br>到款情况:' + item.zfflag + '</td>'
 					+ '<td>' + (item.hwzbz ? item.hwzbz : "") + '</td>'
 //					+'<td>'+item.fptt+'</td>'
 //					+"<td >"+getfiles(item.tid,item.id,item.zfflag)+"</td>"

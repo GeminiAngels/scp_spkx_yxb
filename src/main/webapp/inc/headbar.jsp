@@ -8,7 +8,7 @@
 		<c:if test="${empty register}">
 			<button class="btn btn-default btn-login">登录</button> <button class="btn btn-default btn-register">注册</button>
 		</c:if>
-		<button class="btn btn-danger btn-enindex">EN</button>
+		<%--<button class="btn btn-danger btn-enindex">EN</button>--%>
 	</div>
 	<div class="imbox">
 		<%--<img src="<%=path%>/static/spkx/images/top_txt.png">--%>
