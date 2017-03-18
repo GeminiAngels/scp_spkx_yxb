@@ -51,6 +51,10 @@ public class RegisterService {
 		return db.queryOne(sql, new Object[]{registerid});
 	}
 
+	public List<Map> getThesisByRegisterIds(String registerids) {
+		String sql = "select t_thesis.file,t_thesis.id,t_register.nickname as filename,t_thesis.type,t_thesis.registerid, t_thesis.registeremail from t_thesis left join t_register on t_register.id=t_thesis.registerid where t_thesis.registerid in ("+registerids+") ";
+		return db.queryForBlobList(sql,null);
+	}
 	public boolean insertThesis(Thesis lunwen, InputStream in) {
 		String sql = "insert into t_thesis(file,registerid,registeremail,uploadtime,filename,type,comments) values(?,?,?,?,?,?,?) ";
 		return db.execute_upload(sql, in, new Object[]{lunwen.getRegisterid(), lunwen.getRegisteremail(), new Date(), lunwen.getFilename(), lunwen.getType(), lunwen.getComments()});
@@ -62,7 +66,7 @@ public class RegisterService {
 	}
 
 	public Map getThesis(String fileid) throws SQLException {
-		String sql = "select file , filename , type , id from t_thesis where id = ?";
+		String sql = "select file , registerid,filename , type , id from t_thesis where id = ?";
 		return db.queryBlob(sql, new Object[]{fileid});
 	}
 

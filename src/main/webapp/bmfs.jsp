@@ -13,7 +13,7 @@
 	<meta name="viewport"
 	      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
 	<link rel="shortcut icon" href="<%=path%>/static/assets/ico/favicon.ico">
-	<title>第三届食品科学与人类健康国际研讨会_食品科学网</title>
+	<title>第七届食品与生物学科高水平SCI论文撰写与投稿技巧研修班</title>
 	<link rel="stylesheet" type="text/css" href="<%=path%>/static/spkx/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<%=path%>/static/spkx/css/style.css"/>
 
@@ -29,18 +29,41 @@
 <%@include file="/inc/headbar.jsp" %>
 
 <div class="main">
-	<h2 style="margin-bottom:30px;"><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/>报名方式</h2>
-	<div class="bmfs" style="padding-bottom:50px;">
-		<h3>1、网上报名</h3>
-		<p style="font-size:16px; line-height:36px;">1）手机微信扫描下方二维码报名</p>
-		<div class="ewm"><img src="<%=path%>/static/spkx/images/ewm01.png"></div>
-		<p style="font-size:16px; line-height:36px;">登录我刊网站<a href="http://www.chnfood.cn" target="_blank">www.chnfood.cn</a>，点击进入会议主页进行网上报名。</p>
-		<h3>2、回执报名</h3>
-		<p style="font-size:16px; line-height:36px;">填写附页的<span><a href="<%=path%>/static/spkx/down/第三届食品科学与人类健康国际研讨会参会回执.doc" target="_blank">参会回执</a></span>并发送E-mail至chnfood@163.com或传真至010-83155436均可。该回执电子版也可以从我刊网站<a href="http://www.chnfood.cn" target="_blank">www.chnfood.cn</a> 的会议主页上下载。</p>
-		<p style="font-size:16px; line-height:36px;">两种报名方式采用其中一种即可，不需重复报名，推荐采用微信及网上报名方式。<br>
-			会务组收到报名信息后，会尽快向参会代表电子邮箱发送电子版邀请函，同时邮寄纸质版邀请函，请务必准确填写电子邮箱、详细地址及邮编、电话号码。</p>
-		<p style="font-size:16px; line-height:36px;">更多会议信息请关注食品科学微博和微信</p>
-		<div class="ewm"><img src="<%=path%>/static/spkx/images/ewm02.png"><span style="font-size:16px; line-height:36px;">食品科学微信订阅号</span><img src="<%=path%>/static/spkx/images/ewm01.png"><span style="font-size:16px; line-height:36px;">食品科学微信服务号</span><img src="<%=path%>/static/spkx/images/ewm03.png"><span style="font-size:16px; line-height:36px;">食品科学微博</span></div>
+	<h2><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a href="#">报名方式</a>
+	</h2>
+	<div class="bmfs row">
+		<div class="col-sm-8 col-xs-12">
+			<h3>1）手机微信扫描下方二维码报名</h3>
+			<%--<p>1）手机微信扫描下方二维码报名</p>--%>
+			<div class="ewm"><img src="<%=path%>/static/spkx/images/ewm01.png"></div>
+			<h3>2）网上报名</h3>
+			<p>登录我刊网站SCI培训页面<a href="http://www.chnfood.cn/SCI/" target="_blank">http://www.chnfood.cn/SCI/</a>，进行网上报名。
+			</p>
+			<h3>3）回执报名</h3>
+			<p>填写附页的<span><a href="down/第七届食品与生物学科高水平SCI论文撰写与投稿技巧研修班报名表.doc" target="_blank">参会回执</a></span>
+				并发送E-mail至chnfood@163.com或传真至010-83155436均可。
+				该回执电子版也可以从我刊网站SCI培训页面<a
+						href="http://www.chnfood.cn/SCI/" target="_blank">http://www.chnfood.cn/SCI/</a>下载。</p>
+		</div>
+		<div class="time col-sm-4 col-xs-12">
+		<%--	<h4>时 间 </h4>
+			2017年8月3－4日
+			<br>(8月2日周三早9：00—晚21：00报到)
+			<h4>地 点 </h4>
+			长春（详细地址待后续通知）--%>
+			<h4>报名截止时间 </h4>
+			请计划参加培训的人员于2017年7月15日前报名，名额有限，预报从速。
+		</div>
+		<div class=" col-sm-12 col-xs-12">
+			<p> 以上三种报名方式采用其中一种即可，不需重复报名，推荐采用微信及网上报名方式。
+				<br>会务组收到报名信息后，会尽快向参会代表电子邮箱发送电子版邀请函，同时邮寄纸质版邀请函，请务必准确填写电子邮箱、详细地址及邮编、电话号码。
+			</p>
+			<%--<p>更多会议信息请关注食品科学微博和微信</p>
+			<div class="ewm"><span class="col-sm-6 col-xs-12" style="padding-top:0;"><img
+					src="<%=path%>/static/spkx/images/ewm02.png"><span>食品科学订阅号</span></span><span
+					class="col-sm-6 col-xs-12" style="padding-top:0;"><img src="<%=path%>/static/spkx/images/ewm01.png"><span>食品科学服务号</span></span>
+			</div>--%>
+		</div>
 	</div>
 </div>
 <%@include file="/inc/footer.jsp" %>

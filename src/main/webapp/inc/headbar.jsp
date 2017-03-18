@@ -25,16 +25,16 @@
 <div class="navbox">
 	<div class="nav-spkx">
 		<ul>
-			<li><a href="index.jsp">会议首页</a></li>
-			<li><a href="zzjg.jsp">组织机构</a></li>
-			<li><a href="hyjj.jsp">会议简介</a></li>
-			<li><a href="zwh.jsp">组委会</a></li>
-			<li><a href="hynr.jsp">会议内容</a></li>
-			<li><a href="hylw.jsp">会议论文</a></li>
-			<li><a href="fyhk.jsp">费用及汇款</a></li>
-			<li><a href="hwz.jsp">会务组</a></li>
-			<li><a href="bmfs.jsp">报名方式</a></li>
-			<li><a href="download.jsp">资料下载</a></li>
+			<li><a href="index.jsp">首页</a></li>
+			<li><a href="zsdx.jsp">招生对象</a></li>
+			<li><a href="zjnr.jsp">专家及内容</a></li>
+			<li><a href="dyh.jsp">现场答疑会</a></li>
+			<li><a href="sjdd.jsp">时间及地点</a></li>
+			<li><a href="bmfs.jsp">报名方式 </a></li>
+			<li><a href="fyhk.jsp">培训费 </a></li>
+			<li><a href="zysx.jsp">报到注意事项</a></li>
+			<li><a href="lxfs.jsp">联系方式</a></li>
+			<%--<li><a href="download.jsp">资料下载</a></li>--%>
 			<div class="clear"></div>
 		</ul>
 	</div>
@@ -64,16 +64,16 @@
 						</c:if>
 						<button class="btn btn-danger btn-enindex">EN</button>
 					</li>
-					<li><a href="index.jsp">会议首页</a></li>
-					<li><a href="zzjg.jsp">组织机构</a></li>
-					<li><a href="hyjj.jsp">会议简介</a></li>
-					<li><a href="zwh.jsp">组委会</a></li>
-					<li><a href="hynr.jsp">会议内容</a></li>
-					<li><a href="hylw.jsp">会议论文</a></li>
-					<li><a href="fyhk.jsp">费用及汇款</a></li>
-					<li><a href="hwz.jsp">会务组</a></li>
-					<li><a href="bmfs.jsp">报名方式</a></li>
-					<li><a href="download.jsp">资料下载</a></li>
+					<li><a href="index.jsp">首页</a></li>
+					<li><a href="zsdx.jsp">招生对象</a></li>
+					<li><a href="zjnr.jsp">专家及内容</a></li>
+					<li><a href="dyh.jsp">现场答疑会</a></li>
+					<li><a href="sjdd.jsp">时间及地点</a></li>
+					<li><a href="bmfs.jsp">报名方式 </a></li>
+					<li><a href="fyhk.jsp">培训费 </a></li>
+					<li><a href="zysx.jsp">报到注意事项</a></li>
+					<li><a href="lxfs.jsp">联系方式</a></li>
+					<%--<li><a href="download.jsp">资料下载</a></li>--%>
 					<div class="clear"></div>
 				</ul>
 			</div>

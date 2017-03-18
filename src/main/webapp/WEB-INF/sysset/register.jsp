@@ -33,6 +33,7 @@
 						       placeholder="手机号 / 邮箱 / 姓名">
 						<button type="button" class="btn btn-default" id="btn-query">查询</button>
 						<button type="button" class="btn btn-default" id="btn-print">批量打印胸卡</button>
+						<button type="button" class="btn btn-default" id="btn-down">批量下载照片</button>
 					</div>
 				</div>
 			</div>
@@ -71,7 +72,7 @@
 						</div>
 					</div>--%>
 					<div class="form-group">
-						<label for="invoice" class="col-sm-3 control-label">会议费</label>
+						<label for="invoice" class="col-sm-3 control-label">培训费</label>
 						<div class="col-sm-9">
 							<select id="invoice" name="invoice">
 								<option value="1400元">1400元</option>
@@ -83,8 +84,8 @@
 						<label for="zfflag" class="col-sm-3 control-label">到款情况</label>
 						<div class="col-sm-9">
 							<select id="zfflag" name="zfflag">
-								<option value=0>未缴纳会议费</option>
-								<option value=1>已缴纳会议费</option>
+								<option value=0>未到款</option>
+								<option value=1>已到款</option>
 								<option value=2>收到电子版汇款单</option>
 							</select>
 						</div>
@@ -93,8 +94,8 @@
 						<label for="yqhfszt" class="col-sm-3 control-label">电子版邀请函发送状态</label>
 						<div class="col-sm-9">
 							<select id="yqhfszt" name="yqhfszt">
+								<option value="已发送">已发送</option>
 								<option value="未发送">未发送</option>
-								<option value="已发送，请查收电子邮箱">已发送，请查收电子邮箱</option>
 							</select>
 						</div>
 					</div>
@@ -102,9 +103,9 @@
 						<label for="zzyqhfszt" class="col-sm-3 control-label">纸质版邀请函发送状态</label>
 						<div class="col-sm-9">
 							<select id="zzyqhfszt" name="zzyqhfszt">
+								<option value="已经邮寄">已经邮寄</option>
 								<option value="未邮寄">未邮寄</option>
-								<option value="纸质版邀请函已经邮寄">纸质版邀请函已经邮寄</option>
-								<option value="会议签到现场领取">会议签到现场领取</option>
+								<option value="未邮寄现场领取">未邮寄现场领取</option>
 							</select>
 						</div>
 					</div>
@@ -149,7 +150,7 @@
 					<%--<th>注册时间</th>--%>
 					<th>工作信息</th>
 					<th>邀请函发送状态</th>
-					<th>会议费/到款情况</th>
+					<th>培训费/到款情况</th>
 					<th>会务组备注</th>
 					<%--<th>发票抬头</th>--%>
 					<%--<th>缴费凭据</th>--%>
@@ -250,9 +251,9 @@
 				if (!item.yqhfszt) item.yqhfszt = '';
 				if (!item.zzyqhfszt) item.zzyqhfszt = '';
 				if (item.zfflag == 0) {
-					item.zfflag = '未缴纳会议费';
+					item.zfflag = '未到款';
 				} else if (item.zfflag == 1) {
-					item.zfflag = '已缴纳会议费';
+					item.zfflag = '已到款';
 				} else if (item.zfflag == 2) {
 					item.zfflag = '收到电子版汇款单';
 				} else {
@@ -271,7 +272,7 @@
 
 					+ '<td>单位:' + item.company + ' <br>职务:' + item.job + '</td>'
 					+ '<td>电子版:' + item.yqhfszt + ' <br>纸质版:' + item.zzyqhfszt + '</td>'
-					+ '<td>会议费:' + (item.invoice ? item.invoice : "") + ' <br>到款情况:' + item.zfflag + '</td>'
+					+ '<td>培训费:' + (item.invoice ? item.invoice : "") + ' <br>到款情况:' + item.zfflag + '</td>'
 					+ '<td>' + (item.hwzbz ? item.hwzbz : "") + '</td>'
 //					+'<td>'+item.fptt+'</td>'
 //					+"<td >"+getfiles(item.tid,item.id,item.zfflag)+"</td>"
@@ -370,6 +371,20 @@
 		openwindow('<%=path%>/report/reportJsp/ewm.jsp?time='+Math.random()*10000000000000000,"",1010,600);
 
 	});
+	/**
+	 *批量下载照片
+	 **/
+	$("#btn-down").click(function () {
+		var ids = [];
+		$('td > input:checked').each(function(){
+			if($(this).parent().parent().attr('dataId'))
+				ids.push($(this).parent().parent().attr('dataId'));
+			else
+				$(this).parent().parent().remove();
+		});
+		openwindow('<%=path%>/auth.do?method=downloadFiles&regids='+ids.join(",")+'&time='+Math.random()*10000000000000000,"",1010,600);
+	});
+
 	// 对Date的扩展，将 Date 转化为指定格式的String
 	// 月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，
 	// 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字)

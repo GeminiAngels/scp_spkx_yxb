@@ -208,7 +208,7 @@
 							</tr>
 						</table>
 					</div>
-					<div class="col-sm-8  col-sm-offset-2">
+					<div class="col-sm-4  col-sm-offset-2">
 						<label class="screen-reader-text">证件照片：</label>
 						<input type="file" name="thesis" id="thesis" class="form-control"  ${not empty thesis?'style="display: none"':'style="display: inline"'} />
 						<p style="color:red ;${not empty register?'display:none':''} " >请上传本人正面免冠彩色照片，分辨率大于500*500</p>
@@ -219,18 +219,24 @@
 							<span class="btn btn-default" style=" width: 25% ;float: right ;margin-top: -46px" id="btn-clear" >重新上传</span>
 						</div>
 					</div>
-					<div class="col-sm-4 col-sm-offset-2">
+					<div class="col-sm-4 ">
 						<div class="inputContainer">
 							<label class="screen-reader-text">汇款方式：</label>
-							<input type="text" name="hkfs" id="hkfs" value="${register.hkfs}" class="form-control" autocomplete="off"/>
+							<%--<input type="text" name="hkfs" id="hkfs" value="${register.hkfs}" class="form-control" autocomplete="off"/>--%>
+							<select id="hkfs" name="hkfs" class="form-control" >
+								<option value="">请选择</option>
+								<option value="银行转账" ${not empty register and register.hkfs eq '银行转账'?'selected="selected"':''}>银行转账</option>
+								<option value="邮局汇款" ${not empty register and register.hkfs eq '邮局汇款'?'selected="selected"':''}>邮局汇款</option>
+								<option value="现场缴费" ${not empty register and register.hkfs eq '现场缴费'?'selected="selected"':''}>现场缴费</option>
+							</select>
 						</div>
 					</div>
-					<div class="col-sm-4">
+					<%--<div class="col-sm-4">
 						<div class="inputContainer">
 							<label class="screen-reader-text">培训费：</label>
 							<input type="text" name="pxf" id="pxf" class="form-control" autocomplete="off" value="${register.pxf}"/>
 						</div>
-					</div>
+					</div>--%>
 					<div class="col-sm-8 col-sm-offset-2">
 						<div class="inputContainer">
 							<label class="screen-reader-text"><i>备注：</i></label>
@@ -500,7 +506,7 @@
 				message:$('#message').val(),
 
 				hkfs:$('#hkfs').val(),
-				pxf:$('#pxf').val()
+				pxf:''
 			};
 			if(!register.nickname){
 				$('#nickname').focus().attr('placeholder','该项不能为空！');
@@ -625,7 +631,7 @@
 				message:$('#message').val(),
 
 				hkfs:$('#hkfs').val(),
-				pxf:$('#pxf').val()
+				pxf:''
 
 			};
 

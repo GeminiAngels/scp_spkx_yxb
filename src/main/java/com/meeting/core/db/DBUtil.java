@@ -330,4 +330,44 @@ public class DBUtil {
 		logger.info("执行成功！");
 		return m;
 	}
+	public List queryForBlobList(String sql,Object[] params){
+		logger.info("开始执行："+sql);
+		List list = new ArrayList();
+		try {
+			conn = getConnection();
+			stat = conn.prepareStatement(sql);
+			if(params!=null&&params.length>0){
+				for(int i=1,len=params.length;i<=len;i++){
+					Object p = params[i-1];
+					if(p!=null){
+						if(p instanceof Integer)
+							stat.setInt(i, Integer.parseInt(p.toString()));
+						else if(p instanceof Date)
+							stat.setTimestamp(i, Timestamp.valueOf(p.toString()));
+						else
+							stat.setString(i, p.toString());
+					}
+				}
+			}
+			ResultSet rs = stat.executeQuery();
+			ResultSetMetaData rsmd = rs.getMetaData();
+			while(rs.next()){
+				Map m = new HashMap();
+				m.put(rsmd.getColumnName(1), rs.getBlob(1));
+				for(int i=2,len=rsmd.getColumnCount();i<=len;i++){
+//					String cname = rsmd.getColumnName(i);
+					String cname = rsmd.getColumnLabel(i);//getColumnLabel 解决列名重复起别名问题
+					m.put(cname, rs.getString(cname));
+				}
+				list.add(m);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			logger.error("执行失败："+e.getMessage());
+		} finally {
+			closeConnection();
+		}
+		logger.info("执行成功！");
+		return list;
+	}
 }
