@@ -62,7 +62,7 @@
 						<c:if test="${empty register}">
 							<button class="btn btn-success btn-login">登录</button> <button class="btn btn-warning btn-register">注册</button>
 						</c:if>
-						<button class="btn btn-danger btn-enindex">EN</button>
+						<%--<button class="btn btn-danger btn-enindex">EN</button>--%>
 					</li>
 					<li><a href="index.jsp">首页</a></li>
 					<li><a href="zsdx.jsp">招生对象</a></li>
