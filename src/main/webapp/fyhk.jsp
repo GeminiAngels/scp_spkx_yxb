@@ -13,7 +13,7 @@
 	<meta name="viewport"
 	      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
 	<link rel="shortcut icon" href="<%=path%>/static/assets/ico/favicon.ico">
-	<title>第三届食品科学与人类健康国际研讨会_食品科学网</title>
+	<title>第七届食品与生物学科高水平SCI论文撰写与投稿技巧研修班</title>
 	<link rel="stylesheet" type="text/css" href="<%=path%>/static/spkx/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<%=path%>/static/spkx/css/style.css"/>
 
@@ -22,36 +22,7 @@
 	<script src="<%=path%>/static/spkx/js/jquery.min.js" type="text/javascript"></script>
 	<script src="<%=path%>/static/spkx/js/tab.js" type="text/javascript"></script>
 	<script src="<%=path%>/static/spkx/js/bootstrap.min.js"></script>
-	<script type="text/javascript">
-		var app = {
-				ctx : '<%=path%>',
-				curl : window.location.href,
-				maodian : '${position}'||'#header',
-				user : {
-					id : '${user.id}'/1,
-					name : '${user.cnname}'
-				},
-				register : {
-					id : '${register.id}'/1,
-					bmflag : '${register.bmflag}'/1,
-					username : '${register.username}',
-					email : '${register.email}',
-					nickname : '${register.nickname}',
-					telphone : '${register.telphone}',
-					sex : '${register.sex}',
-					job : '${register.job}',
-					company : '${register.company}',
-					message : '${register.message}'
-				},
-				lunwen : {
-					id : '${lunwen.id}'/1,
-					filename:'${lunwen.filename}',
-					comments:'${lunwen.comments}',
-					type:'${lunwen.type}'
-				},
-				nofile : '${param.nofile}'
-			}
-	</script>
+
 </head>
 
 <body>
@@ -59,22 +30,28 @@
 <%@include file="/inc/headbar.jsp" %>
 
 <div class="main">
-	<h2 style="margin-bottom:30px;"><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/>费用及汇款</h2>
-	<div class="fyhk" style="padding-bottom:50px;">
-		<h3>会议费</h3>
-		<p style="font-size:16px; line-height:36px;">国内：2000元/人（含会议费、餐费等）；普通在校研究生1400元（不含在职攻读学位人员）。<br>
-			国外：500美元/人<br>
-			会议期间安排住宿，费用自理。会议费不包含论文发表费。</p>
-		<h3>汇款事项</h3>
-		<p style="font-size:16px; line-height:36px;">请参会代表收到正式邀请函（纸质版或电子版均可）后，尽快将会议费汇至中国食品杂志社，以便大会日常筹备工作顺利进行。<br>
-			<b style="font-weight:bold;">银行汇款：</b><br>
-			户  名：中国食品杂志社  <br>
-			开户行：工行阜外大街支行<br>
-			帐  号：0200049209024922112<br>
-			<b style="font-weight:bold;">邮局汇款：</b><br>
-			邮寄地址：北京市西城区禄长街头条4号 <br>
-			收 款 人：《食品科学》编辑部收 <br>
-			邮    编：100050 <br>
+	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/>
+		<a href="#">培训费</a>
+	</h2>
+	<div class="fyhk">
+		<h3>费用</h3>
+		<p>请于2017年7月15日前汇至中国食品杂志社，以便制作学习证。
+		</p>
+		<h3>收费标准</h3>
+		<p>教师：1400元
+			<br> 普通在校学生：1000元(不含在职攻读学位人员)
+			<br> 包括学费、资料费、餐费、证书费等。
+		</p>
+		<h3>银行汇款</h3>
+		<p>      户　名：中国食品杂志社
+			<br> 开户行：工行阜外大街支行
+			<br> 帐　号：0200049209024922112
+		</p>
+		<h3>邮局汇款</h3>
+		<p>  邮寄地址：北京市西城区禄长街头条4号
+			<br> 收&nbsp;&nbsp;款&nbsp;人：《食品科学》编辑部收
+			<br> 邮　　编：100050
+			<br> 会议期间统一安排住宿，费用自理。
 		</p>
 	</div>
 </div>

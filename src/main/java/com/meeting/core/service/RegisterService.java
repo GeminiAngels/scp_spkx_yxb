@@ -51,6 +51,10 @@ public class RegisterService {
 		return db.queryOne(sql, new Object[]{registerid});
 	}
 
+	public List<Map> getThesisByRegisterIds(String registerids) {
+		String sql = "select t_thesis.file,t_thesis.id,t_register.nickname as filename,t_thesis.type,t_thesis.registerid, t_thesis.registeremail from t_thesis left join t_register on t_register.id=t_thesis.registerid where t_thesis.registerid in ("+registerids+") ";
+		return db.queryForBlobList(sql,null);
+	}
 	public boolean insertThesis(Thesis lunwen, InputStream in) {
 		String sql = "insert into t_thesis(file,registerid,registeremail,uploadtime,filename,type,comments) values(?,?,?,?,?,?,?) ";
 		return db.execute_upload(sql, in, new Object[]{lunwen.getRegisterid(), lunwen.getRegisteremail(), new Date(), lunwen.getFilename(), lunwen.getType(), lunwen.getComments()});
@@ -62,7 +66,7 @@ public class RegisterService {
 	}
 
 	public Map getThesis(String fileid) throws SQLException {
-		String sql = "select file , filename , type , id from t_thesis where id = ?";
+		String sql = "select file , registerid,filename , type , id from t_thesis where id = ?";
 		return db.queryBlob(sql, new Object[]{fileid});
 	}
 
@@ -80,12 +84,12 @@ public class RegisterService {
 		if ("null".equals(String.valueOf(reg.getId())) || "0".equals(String.valueOf(reg.getId()))) {
 			String sql = "insert into t_register"
 					+ "(username,nickname,password,telphone,email,sex,company,job,journalname,message"
-					+ ",degree,postcode,address,zsyq,invoice,sfcjsx,sxxl,fptt"
-					+ ",officephone,fax,gzqk,title,sffblw,gjbh,gjtm,gjzt,sfztlw,sfsqhyfy,fytm,fynrzy,sfzs,zskssj,zsjssj,yqhfszt"
-					+ ",registertime) "
+					+ ",degree,postcode,address,zsyq,invoice,sfcjsx,sxxl,fptt,officephone,fax"
+					+ ",gzqk,title,sffblw,gjbh,gjtm,gjzt,sfztlw,sfsqhyfy,fytm,fynrzy,sfzs"
+					+",zskssj,zsjssj,yqhfszt,registertime,sfzhm,hkfs,pxf) "
 					+ "values(?,?,?,?,?,?,?,?,?,?"
-					+ ",?,?,?,?,?,?,?,?"
-					+ ",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?"
+					+ ",?,?,?,?,?,?,?,?,?"
+					+ ",?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?"
 					+ ",?)";
 			success = db.execute(sql, new Object[]{
 					reg.getUsername(), reg.getNickname(), StringUtil.MD5(reg.getPassword()),
@@ -95,11 +99,12 @@ public class RegisterService {
 					, reg.getOfficephone(), reg.getFax(), reg.getGzqk(), reg.getTitle(), reg.getSffblw()
 					, reg.getGjbh(), reg.getGjtm(), reg.getGjzt(), reg.getSfztlw(), reg.getSfsqhyfy()
 					, reg.getFytm(), reg.getFynrzy(), reg.getSfzs(), reg.getZskssj(), reg.getZsjssj(), reg.getYqhfszt()
-					, new Date()});
+					, new Date(),reg.getSfzhm(),reg.getHkfs(),reg.getPxf()});
 		} else {//修改
 			StringBuffer sql = new StringBuffer("update t_register set nickname=?,sex=?,company=?,job=?,journalname=?,message=?"
 					+ ",degree=?,postcode=?,address=?,zsyq=?,sfcjsx=?,sxxl=?,fptt=?"
-					+ ",officephone=?,fax=?,gzqk=?,title=?,sffblw=?,gjbh=?,gjtm=?,sfztlw=?,sfsqhyfy=?,fytm=?,fynrzy=?,sfzs=?,zskssj=?,zsjssj=?");
+					+ ",officephone=?,fax=?,gzqk=?,title=?,sffblw=?,gjbh=?,gjtm=?,sfztlw=?,sfsqhyfy=?,fytm=?"
+					+ ",fynrzy=?,sfzs=?,zskssj=?,zsjssj=?,sfzhm=?,hkfs=?,pxf=?");
 			if (reg.getPassword() != null && !"".equals(reg.getPassword())) {
 				sql.append(",password='" + StringUtil.MD5(reg.getPassword()) + "'");
 			}
@@ -111,7 +116,7 @@ public class RegisterService {
 					, reg.getDegree(), reg.getPostcode(), reg.getAddress(), reg.getZsyq(), reg.getSfcjsx(), reg.getSxxl(), reg.getFptt()
 					, reg.getOfficephone(), reg.getFax(), reg.getGzqk(), reg.getTitle(), reg.getSffblw()
 					, reg.getGjbh(), reg.getGjtm(), reg.getSfztlw(), reg.getSfsqhyfy()
-					, reg.getFytm(), reg.getFynrzy(), reg.getSfzs(), reg.getZskssj(), reg.getZsjssj()
+					, reg.getFytm(), reg.getFynrzy(), reg.getSfzs(), reg.getZskssj(), reg.getZsjssj(),reg.getSfzhm(),reg.getHkfs(),reg.getPxf()
 			});
 		}
 

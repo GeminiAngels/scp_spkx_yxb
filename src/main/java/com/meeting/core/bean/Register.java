@@ -51,6 +51,9 @@ public class Register {
 
 	private String zzyqhfszt;	//纸质版邀请函发送状态
 	private String hwzbz;	//会务组备注
+	private String sfzhm;	//身份号码
+	private String hkfs;	//汇款方式
+	private String pxf;	//培训费
 
 	
 	public Register() {
@@ -305,17 +308,76 @@ public class Register {
 		this.hwzbz = hwzbz;
 	}
 
+	public String getSfzhm() {
+		return sfzhm;
+	}
+
+	public void setSfzhm(String sfzhm) {
+		this.sfzhm = sfzhm;
+	}
+
+	public String getHkfs() {
+		return hkfs;
+	}
+
+	public void setHkfs(String hkfs) {
+		this.hkfs = hkfs;
+	}
+
+	public String getPxf() {
+		return pxf;
+	}
+
+	public void setPxf(String pxf) {
+		this.pxf = pxf;
+	}
+
 	@Override
 	public String toString() {
-		return "Register [id=" + id + ", username=" + username + ", password=" + password + ", registertime="
-				+ registertime + ", nickname=" + nickname + ", sex=" + sex + ", gzqk=" + gzqk + ", company=" + company
-				+ ", title=" + title + ", job=" + job + ", address=" + address + ", postcode=" + postcode
-				+ ", officephone=" + officephone + ", fax=" + fax + ", telphone=" + telphone + ", email=" + email
-				+ ", sffblw=" + sffblw + ", journalname=" + journalname + ", gjbh=" + gjbh + ", gjtm=" + gjtm
-				+ ", gjzt=" + gjzt + ", sfztlw=" + sfztlw + ", sfsqhyfy=" + sfsqhyfy + ", fytm=" + fytm + ", fynrzy="
-				+ fynrzy + ", sfzs=" + sfzs + ", zsyq=" + zsyq + ", zskssj=" + zskssj + ", zsjssj=" + zsjssj
-				+ ", invoice=" + invoice + ", zfflag=" + zfflag + ", fptt=" + fptt + ", yqhfszt=" + yqhfszt
-				+ ", message=" + message + ", degree=" + degree + ", sfcjsx=" + sfcjsx + ", sxxl=" + sxxl + "usertype="+usertype+"]";
+		return "Register{" +
+				"id=" + id +
+				", username='" + username + '\'' +
+				", password='" + password + '\'' +
+				", registertime='" + registertime + '\'' +
+				", nickname='" + nickname + '\'' +
+				", sex='" + sex + '\'' +
+				", gzqk='" + gzqk + '\'' +
+				", company='" + company + '\'' +
+				", title='" + title + '\'' +
+				", job='" + job + '\'' +
+				", address='" + address + '\'' +
+				", postcode='" + postcode + '\'' +
+				", officephone='" + officephone + '\'' +
+				", fax='" + fax + '\'' +
+				", telphone='" + telphone + '\'' +
+				", email='" + email + '\'' +
+				", sffblw='" + sffblw + '\'' +
+				", journalname='" + journalname + '\'' +
+				", gjbh='" + gjbh + '\'' +
+				", gjtm='" + gjtm + '\'' +
+				", gjzt='" + gjzt + '\'' +
+				", sfztlw='" + sfztlw + '\'' +
+				", sfsqhyfy='" + sfsqhyfy + '\'' +
+				", fytm='" + fytm + '\'' +
+				", fynrzy='" + fynrzy + '\'' +
+				", sfzs='" + sfzs + '\'' +
+				", zsyq='" + zsyq + '\'' +
+				", zskssj='" + zskssj + '\'' +
+				", zsjssj='" + zsjssj + '\'' +
+				", invoice='" + invoice + '\'' +
+				", zfflag='" + zfflag + '\'' +
+				", fptt='" + fptt + '\'' +
+				", yqhfszt='" + yqhfszt + '\'' +
+				", message='" + message + '\'' +
+				", degree='" + degree + '\'' +
+				", sfcjsx='" + sfcjsx + '\'' +
+				", sxxl='" + sxxl + '\'' +
+				", usertype='" + usertype + '\'' +
+				", zzyqhfszt='" + zzyqhfszt + '\'' +
+				", hwzbz='" + hwzbz + '\'' +
+				", sfzhm='" + sfzhm + '\'' +
+				", hkfs='" + hkfs + '\'' +
+				", pxf='" + pxf + '\'' +
+				'}';
 	}
-	
 }

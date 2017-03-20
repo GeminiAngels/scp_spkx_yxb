@@ -38,7 +38,7 @@
 </div>
 <div class="main">
 	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a
-			href="#">研修班介绍</a></h2>
+			href="#">前言</a></h2>
 	<div class="hyjs row"><img src="<%=path%>/static/spkx/images/pic02.png" alt="" class="col-sm-4 col-xs-6"/>
 		<p class="col-sm-8 col-xs-12">为了帮助食品及生物学科科技人员掌握英文科技论文的撰写技巧、提高SCI期刊收录的命中率，综合提升我国食品及生物学科科技人员的高质量科技论文写作能力。在《Journal
 			of Agricultural and Food Chemistry》、《Food Chemistry》、《Journal of Food Science》、《Food and Bioprocess
@@ -57,17 +57,17 @@
 		</div>
 	</div>
 </div>
-<div class="main">
+<%--<div class="main">
 	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a
 			href="#">研修内容</a></h2>
 	<div class="fyhk">
 		<p>SCI期刊的介绍、概况、特点，目标刊物选择，论文撰写技巧，英文撰写规范，投稿技巧等。
 		</p>
 	</div>
-</div>
-<div class="main_bg">
+</div>--%>
+<%--<div class="main_bg">--%>
 	<div class="main">
-		<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a href="#">课程设置及讲课专家</a>
+		<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a href="#">授课内容及授课专家</a>
 		</h2>
 		<div class="hynr">
 			<div class="left col-sm-12 col-xs-12 row">
@@ -149,10 +149,12 @@
 			<div class="clear"></div>
 		</div>
 	</div>
-</div>
+<%--</div>--%>
+<div class="main_bg" style="margin:0;">
 <div class="main">
-	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a
-			href="#">SCI期刊主编现场答疑会</a></h2>
+	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/>
+		<a href="#">与大咖面对面交流——SCI期刊主编现场答疑会</a>
+	</h2>
 	<div class="fyhk">
 		<%--<h3>会议费</h3>--%>
 		<p>
@@ -160,69 +162,90 @@
 		</p>
 	</div>
 </div>
+</div>
+<div class="main">
+	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/>
+		<a href="#">授课时间及地点</a>
+	</h2>
+	<div class="fyhk">
+		<h3>时 间</h3>
+		<p>2017年8月3－4日 (8月2日周三早9：00—晚21：00报到)
+		</p>
+		<h3>地 点</h3>
+		<p>      长春（详细地址待后续通知）
+		</p>
+	</div>
+</div>
 <div class="main_bg" style="margin:0;">
-	<div class="main">
-		<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a href="#">报名方式</a>
-		</h2>
-		<div class="bmfs row">
-			<div class="col-sm-8 col-xs-12">
-				<h3>1）手机微信扫描下方二维码报名</h3>
-				<%--<p>1）手机微信扫描下方二维码报名</p>--%>
-				<div class="ewm"><img src="<%=path%>/static/spkx/images/ewm01.png"></div>
-				<h3>2）网上报名</h3>
-				<p>登录我刊网站SCI培训页面<a href="http://www.chnfood.cn/SCI/" target="_blank">http://www.chnfood.cn/SCI/</a>，进行网上报名。
-				</p>
-				<h3>3）回执报名</h3>
-				<p>填写附页的<span><a href="down/第七届食品与生物学科高水平SCI论文撰写与投稿技巧研修班报名表.doc" target="_blank">参会回执</a></span>
-					并发送E-mail至chnfood@163.com或传真至010-83155436均可。
-					该回执电子版也可以从我刊网站SCI培训页面<a
-							href="http://www.chnfood.cn/SCI/" target="_blank">http://www.chnfood.cn/SCI/</a>下载。</p>
-			</div>
-			<div class="time col-sm-4 col-xs-12">
-				<h4>时 间 </h4>
-				2017年8月3－4日
-				<br>(8月2日周三早9：00—晚21：00报到)
-				<h4>地 点 </h4>
-				长春（详细地址待后续通知）
-				<h4>报名截止时间 </h4>
-				请计划参加培训的人员于2017年7月15日前报名，名额有限，预报从速。
-			</div>
-			<div class=" col-sm-12 col-xs-12">
-			<p> 以上三种报名方式采用其中一种即可，不需重复报名，推荐采用微信及网上报名方式。
-				<br>会务组收到报名信息后，会尽快向参会代表电子邮箱发送电子版邀请函，同时邮寄纸质版邀请函，请务必准确填写电子邮箱、详细地址及邮编、电话号码。
+<div class="main">
+	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a href="#">报名方式</a>
+	</h2>
+	<div class="bmfs row">
+		<div class="col-sm-8 col-xs-12">
+			<h3>1）手机微信扫描下方二维码报名</h3>
+			<%--<p>1）手机微信扫描下方二维码报名</p>--%>
+			<div class="ewm"><img src="<%=path%>/static/spkx/images/ewm01.png"></div>
+			<h3>2）网上报名</h3>
+			<p>登录我刊网站SCI培训页面<a href="http://www.chnfood.cn/SCI/" target="_blank">http://www.chnfood.cn/SCI/</a>，进行网上报名。
 			</p>
-			<p>更多会议信息请关注食品科学微博和微信</p>
-			<div class="ewm"><span class="col-sm-6 col-xs-12" style="padding-top:0;"><img
-					src="<%=path%>/static/spkx/images/ewm02.png"><span>食品科学订阅号</span></span><span
-					class="col-sm-6 col-xs-12" style="padding-top:0;"><img src="<%=path%>/static/spkx/images/ewm01.png"><span>食品科学服务号</span></span>
-			</div>
-			</div>
+			<h3>3）回执报名</h3>
+			<p>填写附页的<span><a href="down/第七届食品与生物学科高水平SCI论文撰写与投稿技巧研修班报名表.doc" target="_blank">参会回执</a></span>
+				并发送E-mail至chnfood@163.com或传真至010-83155436均可。
+				该回执电子版也可以从我刊网站SCI培训页面<a
+						href="http://www.chnfood.cn/SCI/" target="_blank">http://www.chnfood.cn/SCI/</a>下载。</p>
+		</div>
+		<div class="time col-sm-4 col-xs-12">
+			<%--<h4>时 间 </h4>
+			2017年8月3－4日
+			<br>(8月2日周三早9：00—晚21：00报到)
+			<h4>地 点 </h4>
+			长春（详细地址待后续通知）--%>
+			<h4>报名截止时间 </h4>
+			请计划参加培训的人员于2017年7月15日前报名，名额有限，预报从速。
+		</div>
+		<div class=" col-sm-12 col-xs-12">
+		<p> 以上三种报名方式采用其中一种即可，不需重复报名，推荐采用微信及网上报名方式。
+			<br>会务组收到报名信息后，会尽快向参会代表电子邮箱发送电子版邀请函，同时邮寄纸质版邀请函，请务必准确填写电子邮箱、详细地址及邮编、电话号码。
+		</p>
+		<%--<p>更多会议信息请关注食品科学微博和微信</p>
+		<div class="ewm"><span class="col-sm-6 col-xs-12" style="padding-top:0;"><img
+				src="<%=path%>/static/spkx/images/ewm02.png"><span>食品科学订阅号</span></span><span
+				class="col-sm-6 col-xs-12" style="padding-top:0;"><img src="<%=path%>/static/spkx/images/ewm01.png"><span>食品科学服务号</span></span>
+		</div>--%>
 		</div>
 	</div>
 </div>
+</div>
 <div class="main">
-	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a href="#">费用及汇款</a>
+	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/>
+		<a href="#">培训费</a>
 	</h2>
 	<div class="fyhk">
-		<h3>请于2017年7月15日前汇至中国食品杂志社，以便制作学习证。</h3>
+		<h3>费用</h3>
+		<p>请于2017年7月15日前汇至中国食品杂志社，以便制作学习证。
+		</p>
 		<h3>收费标准</h3>
 		<p>教师：1400元
 			<br> 普通在校学生：1000元(不含在职攻读学位人员)
 			<br> 包括学费、资料费、餐费、证书费等。
 		</p>
-		<h3>汇款方式</h3>
+		<h3>银行汇款</h3>
 		<p>      户　名：中国食品杂志社
 			<br> 开户行：工行阜外大街支行
 			<br> 帐　号：0200049209024922112
-			<br> 如寄现金请直接汇至：北京市西城区禄长街头条4号中国食品杂志社 《食品科学》编辑部收，邮编100050。
-			<br> 会议期间统一安排住宿，费用自理。
 		</p>
+		<h3>邮局汇款</h3>
+			<p>  邮寄地址：北京市西城区禄长街头条4号
+			<br> 收&nbsp;&nbsp;款&nbsp;人：《食品科学》编辑部收
+			<br> 邮　　编：100050
+			<br> 会议期间统一安排住宿，费用自理。
+			</p>
 	</div>
 </div>
 <div class="main_bg" style="margin:0;">
 <div class="main">
 	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a
-			href="#">报到手续</a></h2>
+			href="#">报到注意事项</a></h2>
 	<div class="fyhk">
 		<%--<h3>会议费</h3>--%>
 		<p>
@@ -233,26 +256,26 @@
 </div>
 <div class="main">
 	<div class="hw_zs">
-		<div class="col-sm-5 col-xs-12">
+		<div class="col-sm-12 col-xs-12">
 			<div class="left">
 				<h3>联系方式</h3>
-				<p>联&nbsp;&nbsp;系&nbsp;人：袁艺  张睿梅
-					<br>联系电话：010-63157001或010-83155446/47/48/49/50转8032。
-					<br>
+				<p>联&nbsp;&nbsp;系&nbsp;&nbsp;人：袁艺  张睿梅
+					<br>联系电话：010-63157001或010-83155446/47/48/49/50转8032
+					<br>Email：chnfood_sci@163.com
 					<br>
 				</p>
 			</div>
 		</div>
-		<div class="col-sm-7 col-xs-12">
+		<%--<div class="col-sm-7 col-xs-12">
 			<div class="right">
 				<h3>广告招商招展</h3>
 				<p>会刊广告、会场广告、会场产品展示
 					<br> 详情请拨打广告招商招展热线：010-83155438
 					<br> 传真：010-83152138
 					<br>
-					<a href="down/第三届食品科学与人类健康国际研讨会招商招展回执.doc" target="_blank">招商招展回执</a></p>
+					<a href="down/参加培训回执.doc" target="_blank">招商招展回执</a></p>
 			</div>
-		</div>
+		</div>--%>
 		<div class="clear"></div>
 	</div>
 </div>
