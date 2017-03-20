@@ -39,7 +39,8 @@
 <div class="main">
 	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a
 			href="#">前言</a></h2>
-	<div class="hyjs row"><img src="<%=path%>/static/spkx/images/pic02.png" alt="" class="col-sm-4 col-xs-6"/>
+	<div class="hyjs row">
+		<img src="<%=path%>/static/spkx/images/pic02.png" alt="" class="col-sm-4 col-xs-6 "/>
 		<p class="col-sm-8 col-xs-12">为了帮助食品及生物学科科技人员掌握英文科技论文的撰写技巧、提高SCI期刊收录的命中率，综合提升我国食品及生物学科科技人员的高质量科技论文写作能力。在《Journal
 			of Agricultural and Food Chemistry》、《Food Chemistry》、《Journal of Food Science》、《Food and Bioprocess
 			Technology》、《Journal of Functional
@@ -74,8 +75,9 @@
 				<h3>授课语言：中文＋英文</h3>
 				<div class="col-sm-12 col-xs-12 prof">
 					<h4 class="col-sm-12 col-xs-12">1） SCI期刊及其投稿准备策略</h4>
-					<img class="col-sm-3 col-xs-6" src="<%=path%>/static/spkx/images/prof01.png" height="200"
+					<img class="col-sm-3 col-xs-12 text-center" src="<%=path%>/static/spkx/images/prof01.png" height="200"
 					     width="120" alt=""/>
+
 					<p class="col-sm-9 col-xs-12">孙大文院士：欧洲人文和自然科学院院士、爱尔兰皇家科学院院士、国际食品科学院(IAFoST)院士、国际农业工程学会前任主席、《Food and
 						Bioprocess
 						Technology》（2.691）总编、爱尔兰国立都柏林大学教授、华南理工大学教授，在世界上著名杂志和国际会议上发表了超过800篇高水平论文，出版专著14部，其中超过400篇论文被SCI收录（H-index
@@ -83,7 +85,7 @@
 				</div>
 				<div class="col-sm-12 col-xs-12 prof">
 					<h4 class="col-sm-12 col-xs-12">2） 如何撰写科技论文和评价研究质量</h4>
-					<img class="col-sm-3 col-xs-6" src="<%=path%>/static/spkx/images/prof02.png" height="200"
+					<img class="col-sm-3 col-xs-12" src="<%=path%>/static/spkx/images/prof02.png" height="200"
 					     width="120" alt=""/>
 					<p class="col-sm-9 col-xs-12">刘瑞海教授：国际食品科学院院士、《Food Science and Human Wellness》总编、《Journal of Food
 						Science》(IF 1.696)副主编、美国康奈尔大学食品科学系教授，在国际著名期刊（包括Nature）上发表学术论文140多篇。论文总引用次数为9679，论文平均被引用次数为66.
@@ -91,7 +93,7 @@
 				</div>
 				<div class="col-sm-12 col-xs-12 prof">
 					<h4 class="col-sm-12 col-xs-12">3） 如何准备并成功的发表研究成果</h4>
-					<img class="col-sm-3 col-xs-6" src="<%=path%>/static/spkx/images/prof03.png" height="200"
+					<img class="col-sm-3 col-xs-12" src="<%=path%>/static/spkx/images/prof03.png" height="200"
 					     width="120" alt=""/>
 					<p class="col-sm-9 col-xs-12">Fereidoon Shahidi教授：加拿大《Journal of Functional Foods》(IF
 						3.574)主编、英国《Food Chemistry》(IF 3.390
@@ -99,7 +101,7 @@
 				</div>
 				<div class="col-sm-12 col-xs-12 prof">
 					<h4 class="col-sm-12 col-xs-12">4） 如何提高您的文章接收率：作为Journal of Food Science杂志主编的经验和建议</h4>
-					<img class="col-sm-3 col-xs-6" src="<%=path%>/static/spkx/images/prof04.png" height="200"
+					<img class="col-sm-3 col-xs-12" src="<%=path%>/static/spkx/images/prof04.png" height="200"
 					     width="120" alt=""/>
 					<p class="col-sm-9 col-xs-12">熊幼翎教授：美国肯塔基大学动物和食品科学系研究部主任，目前担任《Journal of Food Science》(IF 1.
 						696)主编、《Food Bioscience》副主编，美国食品科学协会（IFT）会士、美国化学协会农业与食品化学部会士。获瑞典皇家农林科学院最高奖Bertebos
@@ -107,7 +109,7 @@
 				</div>
 				<div class="col-sm-12 col-xs-12 prof">
 					<h4 class="col-sm-12 col-xs-12">5） SCI文章被退稿原因以及如何避免</h4>
-					<img class="col-sm-3 col-xs-6" src="<%=path%>/static/spkx/images/prof05.png" height="200"
+					<img class="col-sm-3 col-xs-12" src="<%=path%>/static/spkx/images/prof05.png" height="200"
 					     width="120"
 					     alt=""/>
 					<p class="col-sm-9 col-xs-12">何其傥教授：国际食品科学院院士、美国罗格斯大学食品科学系杰出教授、美国化学学会会士、美国食品科学技术学会会士，现任《Journal of
@@ -126,7 +128,7 @@
 				</div>
 				<div class="col-sm-12 col-xs-12 prof">
 					<h4 class="col-sm-12 col-xs-12">7） 英文科技期刊稿件及部分已发表文章中常见病句的分析</h4>
-					<img class="col-sm-3 col-xs-6" src="<%=path%>/static/spkx/images/prof07.png" height="200"
+					<img class="col-sm-3 col-xs-12" src="<%=path%>/static/spkx/images/prof07.png" height="200"
 					     width="120"
 					     alt=""/>
 					<p class="col-sm-9 col-xs-12">
@@ -136,7 +138,7 @@
 				</div>
 				<div class="col-sm-12 col-xs-12 prof">
 					<h4 class="col-sm-12 col-xs-12">8） 如何在美国《农业与食品化学》杂志上发表文章</h4>
-					<img class="col-sm-3 col-xs-6" src="<%=path%>/static/spkx/images/prof08.png" height="200"
+					<img class="col-sm-3 col-xs-12" src="<%=path%>/static/spkx/images/prof08.png" height="200"
 					     width="120"
 					     alt=""/>
 					<p class="col-sm-9 col-xs-12">

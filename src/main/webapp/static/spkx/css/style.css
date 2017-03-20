@@ -838,4 +838,12 @@ ul.abdtbox li.right .jx {
 	.lang {
 		display: none;
 	}
+    .hynr img{
+	    width:200px;
+	    height:220px;
+	    margin-left: 20%;
+    }
+    .hyjs img{
+	    display: none;
+    }
 }
