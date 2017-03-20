@@ -78,6 +78,7 @@
       <value>30</value>
     </config>
     <config>
+      <!-- 在集群配置中，涉及到地址跳转则最好设置一下，格式为http://www.xxx.com/xxx -->
       <name>appUrlPrefix</name>
       <value></value>
     </config>
