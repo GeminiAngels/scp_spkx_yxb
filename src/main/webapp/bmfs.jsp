@@ -35,13 +35,13 @@
 		<div class="col-sm-8 col-xs-12">
 			<h3>1）手机微信扫描下方二维码报名</h3>
 			<%--<p>1）手机微信扫描下方二维码报名</p>--%>
-			<div class="ewm"><img src="<%=path%>/static/spkx/images/ewm01.png"></div>
+			<div class="ewm"><img src="<%=path%>/static/spkx/images/ewm01.jpg" width="113" height="113"></div>
 			<h3>2）网上报名</h3>
 			<p>登录我刊网站SCI培训页面<a href="http://www.chnfood.cn/SCI/" target="_blank">http://www.chnfood.cn/SCI/</a>，进行网上报名。
 			</p>
 			<h3>3）回执报名</h3>
-			<p>填写附页的<span><a href="down/第七届食品与生物学科高水平SCI论文撰写与投稿技巧研修班报名表.doc" target="_blank">参会回执</a></span>
-				并发送E-mail至chnfood@163.com或传真至010-83155436均可。
+			<p>填写附页的<span><a href="down/第7届食品与生物学科高水平SCI论文撰写与投稿技巧研修班报名表.doc" target="_blank">参会回执</a></span>
+				并发送E-mail至chnfood_sci@163.com或传真至010-83155436均可。
 				该回执电子版也可以从我刊网站SCI培训页面<a
 						href="http://www.chnfood.cn/SCI/" target="_blank">http://www.chnfood.cn/SCI/</a>下载。</p>
 		</div>

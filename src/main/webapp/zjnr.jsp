@@ -97,15 +97,12 @@
 					Journal of Clinical Investigation》(SCI核心) 编委。</p>
 			</div>
 			<div class="col-sm-12 col-xs-12 prof">
-				<h4 class="col-sm-12 col-xs-12">8） 如何在美国《农业与食品化学》杂志上发表文章</h4>
-				<img class="col-sm-3 col-xs-6" src="<%=path%>/static/spkx/images/prof08.png" height="200"
-				     width="120"
-				     alt=""/>
+				<h4 class="col-sm-12 col-xs-12">8）如何撰写与发表高质量SCI论文</h4>
+				<img class="col-sm-3 col-xs-12" src="<%=path%>/static/spkx/images/prof08.jpg" height="200"
+					 width="120"
+					 alt=""/>
 				<p class="col-sm-9 col-xs-12">
-					陈振宇教授：香港中文大学生命科学学院食品营养学部副主任、美国化学会会士、英国皇家化学会会士。主要研究方向为天然生物活性产物、功能食品、脂肪酸和胆固醇代谢与心血管疾病。陈教授目前已发表220余篇SCI科学论文，总引用达8
-					900多次， H-index 51。陈教授还担任美国《Journal of Agricultural and Food Chemistry》（IF 2.912）杂志副主编和包括《Food &
-					Function》、《Journal of Functional Foods》、《Recent Patents on Food》、《Nutrition &
-					Agriculture》、《Biomedical and Environmental Sciences》等杂志的编委成员。</p>
+					王应宽主编：《国际农业与生物工程学报(IJABE)》（SCI）主编、《农业工程学报》副主编、《农业工程技术》社长/总编辑。曾任国际期刊《CIGR Journal》主编、《IAEJ》执行主编。主要研究方向为农业机械化与信息化、农产品加工、生物质能、编辑出版、开放存取和国际科技交流。作科技论文撰写与发表的讲座报告100多场次，为农业部、商务部援外农业培训研修班英文授课6 次。</p>
 			</div>
 		</div>
 		<div class="clear"></div>

@@ -37,7 +37,7 @@
 	</marquee>--%>
 </div>
 <div class="main">
-	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a
+	<h2><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a
 			href="#">前言</a></h2>
 	<div class="hyjs row">
 		<img src="<%=path%>/static/spkx/images/pic02.png" alt="" class="col-sm-4 col-xs-6 "/>
@@ -50,7 +50,7 @@
 </div>
 <div class="main_bg">
 	<div class="main">
-		<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a href="#">招生对象</a>
+		<h2><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a href="#">招生对象</a>
 		</h2>
 		<div class="fyhk">
 			<p>食品与生物学科的相关教师、研究人员、学生、企事业单位技术人员、检验检疫人员，及其他有SCI期刊投稿需求的人员等。
@@ -59,7 +59,7 @@
 	</div>
 </div>
 <%--<div class="main">
-	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a
+	<h2><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a
 			href="#">研修内容</a></h2>
 	<div class="fyhk">
 		<p>SCI期刊的介绍、概况、特点，目标刊物选择，论文撰写技巧，英文撰写规范，投稿技巧等。
@@ -68,7 +68,7 @@
 </div>--%>
 <%--<div class="main_bg">--%>
 	<div class="main">
-		<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a href="#">授课内容及授课专家</a>
+		<h2><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a href="#">授课内容及授课专家</a>
 		</h2>
 		<div class="hynr">
 			<div class="left col-sm-12 col-xs-12 row">
@@ -137,15 +137,12 @@
 						Journal of Clinical Investigation》(SCI核心) 编委。</p>
 				</div>
 				<div class="col-sm-12 col-xs-12 prof">
-					<h4 class="col-sm-12 col-xs-12">8） 如何在美国《农业与食品化学》杂志上发表文章</h4>
-					<img class="col-sm-3 col-xs-12" src="<%=path%>/static/spkx/images/prof08.png" height="200"
+					<h4 class="col-sm-12 col-xs-12">8）如何撰写与发表高质量SCI论文</h4>
+					<img class="col-sm-3 col-xs-12" src="<%=path%>/static/spkx/images/prof08.jpg" height="200"
 					     width="120"
 					     alt=""/>
 					<p class="col-sm-9 col-xs-12">
-						陈振宇教授：香港中文大学生命科学学院食品营养学部副主任、美国化学会会士、英国皇家化学会会士。主要研究方向为天然生物活性产物、功能食品、脂肪酸和胆固醇代谢与心血管疾病。陈教授目前已发表220余篇SCI科学论文，总引用达8
-						900多次， H-index 51。陈教授还担任美国《Journal of Agricultural and Food Chemistry》（IF 2.912）杂志副主编和包括《Food &
-						Function》、《Journal of Functional Foods》、《Recent Patents on Food》、《Nutrition &
-						Agriculture》、《Biomedical and Environmental Sciences》等杂志的编委成员。</p>
+						王应宽主编：《国际农业与生物工程学报(IJABE)》（SCI）主编、《农业工程学报》副主编、《农业工程技术》社长/总编辑。曾任国际期刊《CIGR Journal》主编、《IAEJ》执行主编。主要研究方向为农业机械化与信息化、农产品加工、生物质能、编辑出版、开放存取和国际科技交流。作科技论文撰写与发表的讲座报告100多场次，为农业部、商务部援外农业培训研修班英文授课6 次。</p>
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -154,19 +151,18 @@
 <%--</div>--%>
 <div class="main_bg" style="margin:0;">
 <div class="main">
-	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/>
+	<h2><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/>
 		<a href="#">与大咖面对面交流——SCI期刊主编现场答疑会</a>
 	</h2>
 	<div class="fyhk">
 		<%--<h3>会议费</h3>--%>
-		<p>
-			为提供充分交流机会，使得学员获得更好的学习效果，解决自己在撰写SCI文章过程中遇到的困扰，主办方特别在培训班召开第一天8月3日晚上19：00-21:00设置“SCI期刊主编现场答疑会”，由当天授课主编针对学员提出的问题予以详细解答。
+		<p>　　为提供充分交流机会，使得学员获得更好的学习效果，解决自己在撰写SCI文章过程中遇到的困扰，主办方特别在培训班召开第一天8月3日晚上19：00-21:00设置“SCI期刊主编现场答疑会”，由当天授课主编针对学员提出的问题予以详细解答。
 		</p>
 	</div>
 </div>
 </div>
 <div class="main">
-	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/>
+	<h2><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/>
 		<a href="#">授课时间及地点</a>
 	</h2>
 	<div class="fyhk">
@@ -180,19 +176,19 @@
 </div>
 <div class="main_bg" style="margin:0;">
 <div class="main">
-	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a href="#">报名方式</a>
+	<h2><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a href="#">报名方式</a>
 	</h2>
 	<div class="bmfs row">
 		<div class="col-sm-8 col-xs-12">
 			<h3>1）手机微信扫描下方二维码报名</h3>
 			<%--<p>1）手机微信扫描下方二维码报名</p>--%>
-			<div class="ewm"><img src="<%=path%>/static/spkx/images/ewm01.png"></div>
+			<div class="ewm"><img src="<%=path%>/static/spkx/images/ewm01.jpg" width="113" height="113"></div>
 			<h3>2）网上报名</h3>
 			<p>登录我刊网站SCI培训页面<a href="http://www.chnfood.cn/SCI/" target="_blank">http://www.chnfood.cn/SCI/</a>，进行网上报名。
 			</p>
 			<h3>3）回执报名</h3>
-			<p>填写附页的<span><a href="down/第七届食品与生物学科高水平SCI论文撰写与投稿技巧研修班报名表.doc" target="_blank">参会回执</a></span>
-				并发送E-mail至chnfood@163.com或传真至010-83155436均可。
+			<p>填写附页的<span><a href="down/第7届食品与生物学科高水平SCI论文撰写与投稿技巧研修班报名表.doc" target="_blank">参会回执</a></span>
+				并发送E-mail至chnfood_sci@163.com或传真至010-83155436均可。
 				该回执电子版也可以从我刊网站SCI培训页面<a
 						href="http://www.chnfood.cn/SCI/" target="_blank">http://www.chnfood.cn/SCI/</a>下载。</p>
 		</div>
@@ -219,12 +215,11 @@
 </div>
 </div>
 <div class="main">
-	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/>
+	<h2><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/>
 		<a href="#">培训费</a>
 	</h2>
 	<div class="fyhk">
-		<h3>费用</h3>
-		<p>请于2017年7月15日前汇至中国食品杂志社，以便制作学习证。
+		<p>请于<span class="reddate">2017年7月15日</span>前汇至中国食品杂志社，以便制作学习证。
 		</p>
 		<h3>收费标准</h3>
 		<p>教师：1400元
@@ -238,7 +233,7 @@
 		</p>
 		<h3>邮局汇款</h3>
 			<p>  邮寄地址：北京市西城区禄长街头条4号
-			<br> 收&nbsp;&nbsp;款&nbsp;人：《食品科学》编辑部收
+			<br> <span class="w3">收款人</span>：《食品科学》编辑部收
 			<br> 邮　　编：100050
 			<br> 会议期间统一安排住宿，费用自理。
 			</p>
@@ -246,7 +241,7 @@
 </div>
 <div class="main_bg" style="margin:0;">
 <div class="main">
-	<h2><span><a href="#">查看更多+</a></span><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a
+	<h2><img src="<%=path%>/static/spkx/images/ico_tt.png" alt=""/><a
 			href="#">报到注意事项</a></h2>
 	<div class="fyhk">
 		<%--<h3>会议费</h3>--%>
@@ -261,7 +256,7 @@
 		<div class="col-sm-12 col-xs-12">
 			<div class="left">
 				<h3>联系方式</h3>
-				<p>联&nbsp;&nbsp;系&nbsp;&nbsp;人：袁艺  张睿梅
+				<p><span class="w3">联系人</span>：袁艺、张睿梅
 					<br>联系电话：010-63157001或010-83155446/47/48/49/50转8032
 					<br>Email：chnfood_sci@163.com
 					<br>

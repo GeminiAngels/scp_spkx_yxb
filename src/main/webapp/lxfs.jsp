@@ -32,7 +32,7 @@
 		<div class="col-sm-12 col-xs-12">
 			<div class="left">
 				<h3>联系方式</h3>
-				<p>联&nbsp;&nbsp;系&nbsp;&nbsp;人：袁艺  张睿梅
+				<p><span class="w3">联系人</span>：袁艺、张睿梅
 					<br>联系电话：010-63157001或010-83155446/47/48/49/50转8032
 					<br>Email：chnfood_sci@163.com
 					<br>
