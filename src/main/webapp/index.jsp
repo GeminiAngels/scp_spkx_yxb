@@ -310,7 +310,7 @@
 		//获取后台通知内容
 		NoticeService.getAllEnabledNotice(function (notices) {
 			$("marquee").html('');
-			var trs = '通知：';
+			var trs = '';
 			$.each(notices, function (index, n) {
 				if (notices.length == 1) {
 					trs += "<a href='tz.jsp?notice=" + n.id + "'>" + n.title + "</a>";
