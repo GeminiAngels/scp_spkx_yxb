@@ -32,6 +32,8 @@
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
+	<link href="<%=path%>/res/lib/jquery-validation/jquery.validate.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -315,7 +317,12 @@
 <script src="<%=path%>/res/js/bootstrap-datetimepicker.min.js"></script>
 <!-- 格式化输入 -->
 <script src="<%=path%>/res/js/jquery.inputmask.bundle.js"></script>
+
+<script src="<%=path%>/res/lib/jquery-validation/jquery.validate.min.js"></script>
+<script src="<%=path%>/res/lib/jquery-validation/localization/messages_zh.js"></script>
+
 <script src="<%=path%>/res/js/common.js"></script>
+<script src="<%=path%>/res/js/card.js"></script>
 <script src="<%=path%>/static/spkx/js/biz.js"></script>
 <script src="<%=path%>/res/js/qrcode.js"></script>
 
@@ -464,8 +471,103 @@
 			}
 			return v||'不需要';
 		}
+
+		// 身份证号码验证
+		jQuery.validator.addMethod("isIdCardNo", function(value, element) {
+			return this.optional(element) || idCardNoUtil.checkIdCardNo(value);
+		}, "请正确输入您的身份证号码");
+
+		jQuery.validator.addMethod("isPhone", function(value, element) {
+			var length = value.length;
+			var mobile = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+			return this.optional(element) || (length == 11 && mobile.test(value));
+		}, "请填写正确的手机号码");//可以自定义默认提示信息
+
+		jQuery.validator.addMethod("isTel", function(value, element) {
+			var tel = /^\d{3,4}-?\d{7,9}$/; //电话号码格式010-12345678
+			return this.optional(element) || (tel.test(value));
+		}, "请正确填写您的办公电话");
+
+		// 邮政编码验证
+		jQuery.validator.addMethod("isZipCode", function(value, element) {
+			var tel = /^[0-9]{6}$/;
+			return this.optional(element) || (tel.test(value));
+		}, "请正确填写您的邮政编码");
+
+		$("#registerForm").validate({
+			errorElement: 'i', //default input error message container
+			errorClass: 'fa fa-check', // default input error message class
+			focusInvalid: false, // do not focus the last invalid input
+			ignore: "",  // validate all fields including form hidden input
+			rules: {
+				nickname:'required',
+				password:{
+					required:true,
+					minlength:6
+				},
+				repassword:{
+					required:true,
+					equalTo:'#password'
+				},
+				sfzhm: {
+					required:true,
+					isIdCardNo:true
+				},
+				degree:'required',
+				gzqk:'required',
+				job:'required',
+				title:'required',
+				company:'required',
+				officephone:{
+					required:true,
+					isTel:true
+				},
+				email: {
+					required: true,
+					email: true
+				},
+				telphone: {
+					required: true,
+					isPhone:true
+				},
+				address:'required',
+				postcode: {
+					required:true,
+					isZipCode:true
+				}
+			},
+			messages: {
+				email: "邮箱格式不正确！",
+				password:{
+					required:'密码不能为空',
+					minlength:'密码长度最少6位'
+				},
+				repassword:{
+					equalTo:'两次密码输入不一致！'
+				}
+			},
+			errorPlacement: function (error, element) { // render error placement for each input type
+				element.attr("data-original-title", error.text()).tooltip({'container': 'body'});
+				element.attr('placeholder',error.text());
+			},
+
+			highlight: function (element) {
+				$(element).css('border','2px dotted red');
+				$(element).focus();
+			},
+
+			success: function (label, element) {
+				$(element).removeAttr("data-original-title");
+				$(element).css('border','1px solid green');
+			},
+		});
+
 		//注册按钮
 		$('#registerBtn').off('click').on('click',function(e){
+
+			if(!$('#registerForm').valid())
+				return false;
+
 			var that = this;
 			var register = {
 				username:'',
@@ -590,6 +692,15 @@
 		});
 		//修改按钮
 		$('#editBtn').off('click').on('click', function (e) {
+
+			if(!$('#id').val()) {
+				alert('登录超时，请重新登录！');
+				window.location.href = app.ctx+'/login.jsp';
+			}
+
+			if(!$('#registerForm').valid())
+				return false;
+
 			var that = this;
 			var register = {
 				id: $('#id').val(),
@@ -811,12 +922,29 @@
 			else
 				$('#zssj_area').show();
 		});*/
-		$('#zskssj,#zsjssj').datetimepicker({
+		$('#zskssj').datetimepicker({
 			minView: "month", //选择日期后，不会再跳转去选择时分秒
 			format: 'yyyy-mm-dd',
 			language: 'zh-CN',
 			autoclose:true ,//选择日期后自动关闭
-			width:'100%'
+			width:'100%',
+			startDate:new Date().getMonth()<=7?'2017-08-01':new Date(),
+			endDate:'2017-08-31'
+		}).on('changeDate',function(e){
+			var startTime = e.date;
+			$('#zsjssj').datetimepicker('setStartDate',startTime);
+		});
+		$('#zsjssj').datetimepicker({
+			minView: "month", //选择日期后，不会再跳转去选择时分秒
+			format: 'yyyy-mm-dd',
+			language: 'zh-CN',
+			autoclose:true ,//选择日期后自动关闭
+			width:'100%',
+			startDate:new Date().getMonth()<=7?'2017-08-01':new Date(),
+			endDate:'2017-08-31'
+		}).on('changeDate',function(e){
+			var endTime = e.date;
+			$('#zskssj').datetimepicker('setEndDate',endTime);
 		});
 		<c:choose>
 		<c:when  test="${not empty register}">
@@ -824,7 +952,7 @@
 		$('#zsjssj').val('${fn:substring(register.zsjssj,0,10)}');
 		</c:when >
 		<c:otherwise>
-		$('#zskssj,#zsjssj').val(new Date().format('yyyy-MM-dd'));
+		//$('#zskssj,#zsjssj').val(new Date().getMonth()<=7?'2017-08-01':new Date().format('yyyy-MM-dd'));
 		</c:otherwise>
 		</c:choose>
 		$('#zskssj,#zsjssj').inputmask("2099-99-99");

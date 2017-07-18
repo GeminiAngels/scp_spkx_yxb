@@ -50,8 +50,8 @@ public class DBUtil {
 				
 				connUrl = "jdbc:mysql://localhost:3306/scp_spkx_yxb?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true";
 				connUser = "root";
-				connPwd = "spkxmysql";
-//				connPwd = "mysql";
+//				connPwd = "spkxmysql";
+				connPwd = "mysql";
 			} else {
 				connClass = "oracle.jdbc.driver.OracleDriver";
 				connUrl = "jdbc:oracle:thin:@localhost:1521/orcl";
