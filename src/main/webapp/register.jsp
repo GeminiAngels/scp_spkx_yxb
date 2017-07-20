@@ -249,7 +249,7 @@
 					<div class="col-sm-4 col-sm-offset-2">
 						<div class="inputContainer">
 							<label class="screen-reader-text">到款情况：</label>
-							<input type="text" name="zfflag" id="zfflag" class="form-control" autocomplete="off" value="<c:if test="${register.zfflag eq 0}">未缴纳会议费</c:if><c:if test="${register.zfflag eq 1}">已缴纳会议费</c:if><c:if test="${register.zfflag eq 2}">收到电子版汇款单</c:if>" disabled="disabled" >
+							<input type="text" name="zfflag" id="zfflag" class="form-control" autocomplete="off" value="<c:if test="${register.zfflag eq 0}">未到款</c:if><c:if test="${register.zfflag eq 1}">已到款</c:if><c:if test="${register.zfflag eq 2}">收到电子版汇款单</c:if>" disabled="disabled" >
 						</div>
 					</div>
 					<div class="col-sm-4">
@@ -283,9 +283,6 @@
 							</c:otherwise>
 						</c:choose>
 
-						<!-- <c:if test="${not empty register}">
-						<button id="payBtn" name="submit" type="button" class="btn btn-primary btn-lg" ${register.zfflag eq '1'?'disabled="disabled"':''}>${register.invoice eq '不需要'?'确定':'生成订单并支付'}</button>
-						</c:if> -->
 					</div>
 					<%--<c:if test="${not empty register}">
 						<div class="col-sm-4 col-sm-offset-4" style="padding-top: 20px">
