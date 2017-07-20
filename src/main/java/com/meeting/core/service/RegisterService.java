@@ -101,7 +101,7 @@ public class RegisterService {
 					, reg.getFytm(), reg.getFynrzy(), reg.getSfzs(), reg.getZskssj(), reg.getZsjssj(), reg.getYqhfszt()
 					, new Date(),reg.getSfzhm(),reg.getHkfs(),reg.getPxf()});
 		} else {//修改
-			StringBuffer sql = new StringBuffer("update t_register set nickname=?,sex=?,company=?,job=?,journalname=?,message=?"
+			StringBuffer sql = new StringBuffer("update t_register set email=?,nickname=?,sex=?,company=?,job=?,journalname=?,message=?"
 					+ ",degree=?,postcode=?,address=?,zsyq=?,sfcjsx=?,sxxl=?,fptt=?"
 					+ ",officephone=?,fax=?,gzqk=?,title=?,sffblw=?,gjbh=?,gjtm=?,sfztlw=?,sfsqhyfy=?,fytm=?"
 					+ ",fynrzy=?,sfzs=?,zskssj=?,zsjssj=?,sfzhm=?,hkfs=?,pxf=?");
@@ -111,7 +111,7 @@ public class RegisterService {
 			sql.append(" where id = " + reg.getId());
 			System.out.println(sql.toString());
 			success = db.execute(sql.toString(), new Object[]{
-					reg.getNickname(), reg.getSex(),
+					reg.getEmail(),reg.getNickname(), reg.getSex(),
 					reg.getCompany(), reg.getJob(), reg.getJournalname(), reg.getMessage()
 					, reg.getDegree(), reg.getPostcode(), reg.getAddress(), reg.getZsyq(), reg.getSfcjsx(), reg.getSxxl(), reg.getFptt()
 					, reg.getOfficephone(), reg.getFax(), reg.getGzqk(), reg.getTitle(), reg.getSffblw()
